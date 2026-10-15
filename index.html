@@ -65,8 +65,12 @@
 </section>
 
 <section id="wages" class="tab">
-  <p class="muted small">Provincial remuneración total (71.1) with CPI extrapolation to latest national CPI month <span class="tag-estimate">Estimate</span> where noted.</p>
-  <div class="card"><h3>Average gross wage by province (ARS + USD)</h3><div id="wgBar" class="chart tall sk"></div></div>
+  <p class="muted small">Provincial average total remuneration — registered private employees (OEDE/SIPA xlsx). June/December include aguinaldo (SAC); comparisons use May 2026.</p>
+  <div class="card"><h3>Total wage by province vs National (May 2026)</h3><div id="wgBar" class="chart tall sk"></div></div>
+  <div class="grid g2">
+    <div class="card"><h3>Sector wages by province (May 2026)</h3><p class="muted small">Toggle display currency with header chip. Heatmap uses ARS levels.</p><div id="wgSector" class="chart tall sk"></div></div>
+    <div class="card"><h3>Wage series</h3><p class="muted small"><button type="button" id="wgSeriesMode" class="chip">USD @ current FX</button> — USD uses BCRA A3500 as of load date only; “Real” deflates by national CPI index.</p><div id="wgSeries" class="chart tall sk"></div></div>
+  </div>
   <div class="card"><div class="tablewrap"><table id="wgTable"></table></div></div>
 </section>
 

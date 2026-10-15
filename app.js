@@ -1,7 +1,16 @@
 "use strict";
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => [...document.querySelectorAll(s)];
-const S = { tab: "overview", ccy: "USD", fx: 1, fxDate: "", drawn: {}, data: null, aff: { pct: 50, rentShare: 1, flatShare: 1 } };
+const S = {
+  tab: "overview",
+  ccy: "USD",
+  fx: 1,
+  fxDate: "",
+  drawn: {},
+  data: null,
+  aff: { pct: 50, rentShare: 1, flatShare: 1 },
+  wgSeriesReal: false,
+};
 
 const OEDE_PROV = {
   neuquen: "Neuquén",
@@ -380,25 +389,130 @@ function drawSectors() {
   plot("secConst", [{ x: co.map((p) => p.date), y: co.map((p) => p.value), type: "scatter", mode: "lines" }], {});
 }
 
+function wageArsOrUsd(ars) {
+  if (ars == null) return null;
+  if (S.ccy === "ARS") return ars;
+  return ars / S.fx;
+}
+
+function wageSeriesVal(ars, dateYm) {
+  if (ars == null) return null;
+  if (S.wgSeriesReal) {
+    const sc = cpiScale(`${dateYm}-01`);
+    return ars / (sc || 1);
+  }
+  return wageArsOrUsd(ars);
+}
+
 function drawWages() {
   const provs = S.data.labour_provinces?.provinces || [];
+  const natBench = S.data.labour_provinces?.benchmarks?.find((b) => b.key === "national");
+  const wNat = natBench ? wageProvGross(natBench) : null;
   const rows = provs.map((p) => {
     const w = wageProvGross(p);
     return { p, w };
   });
+  const barY = (w) => (w ? wageArsOrUsd(w.gross) : null);
+  const barLabels = rows.map((r) => r.p.label).concat(wNat ? ["National"] : []);
+  const barVals = rows.map((r) => barY(r.w)).concat(wNat ? [barY(wNat)] : []);
   plot(
     "wgBar",
     [
       {
-        x: rows.map((r) => r.p.label),
-        y: rows.map((r) => (r.w ? r.w.gross / S.fx : null)),
+        x: barLabels,
+        y: barVals,
         type: "bar",
-        name: S.ccy === "USD" ? "USD" : "ARS",
+        marker: {
+          color: barLabels.map((l) => (l === "National" ? css("--mu") : css("--ac"))),
+        },
       },
     ],
-    { yaxis: { title: S.ccy === "USD" ? "USD / month" : "ARS / month" } }
+    {
+      yaxis: { title: S.ccy === "USD" ? `USD / month (@ ${S.fxDate})` : "ARS / month" },
+    }
   );
-  $("#wgTable").innerHTML = `<thead><tr><th>Province</th><th>Gross (est.)</th><th>As of</th><th>vs CABA</th></tr></thead><tbody>${rows
+
+  const sectorKeys = [
+    "oil_gas",
+    "mining",
+    "construction",
+    "logistics",
+    "utilities",
+    "finance",
+    "it_services",
+    "professional_services",
+    "commerce_retail",
+  ];
+  const provLabels = provs.map((p) => p.label);
+  const z = sectorKeys.map((sk) =>
+    provs.map((p) => {
+      const v = sectorWageMax(p, sk);
+      if (v == null) return null;
+      return S.ccy === "USD" ? v / S.fx : v;
+    })
+  );
+  plot(
+    "wgSector",
+    [
+      {
+        type: "heatmap",
+        x: provLabels,
+        y: sectorKeys.map((k) => SECTOR_LABELS[k] || k),
+        z,
+        colorscale: "Blues",
+        hovertemplate: "%{x}<br>%{y}: %{z:.0f}<extra></extra>",
+      },
+    ],
+    {
+      margin: { l: 140, r: 16, t: 10, b: 80 },
+      yaxis: { automargin: true },
+      xaxis: { tickangle: -35 },
+    }
+  );
+
+  const seriesProv = provs.filter((p) => S.data.oede_wages?.provinces?.[oedeProvKey(p)]?.series?.length);
+  const traces = seriesProv.map((p) => {
+    const s = S.data.oede_wages.provinces[oedeProvKey(p)].series.filter((pt) => !isSacMonth(pt.date));
+    return {
+      x: s.map((pt) => pt.date),
+      y: s.map((pt) => wageSeriesVal(pt.value, pt.date)),
+      type: "scatter",
+      mode: "lines",
+      name: p.label,
+    };
+  });
+  if (wNat) {
+    const s = S.data.oede_wages.provinces.National.series.filter((pt) => !isSacMonth(pt.date));
+    traces.push({
+      x: s.map((pt) => pt.date),
+      y: s.map((pt) => wageSeriesVal(pt.value, pt.date)),
+      type: "scatter",
+      mode: "lines",
+      name: "National",
+      line: { dash: "dot", width: 2 },
+    });
+  }
+  plot("wgSeries", traces, {
+    yaxis: {
+      title: S.wgSeriesReal
+        ? "Real ARS (CPI-deflated)"
+        : S.ccy === "USD"
+          ? `USD / month (FX ${S.fxDate})`
+          : "ARS / month",
+    },
+  });
+
+  if (!$("#wgSeriesMode").dataset.bound) {
+    $("#wgSeriesMode").dataset.bound = "1";
+    $("#wgSeriesMode").onclick = () => {
+      S.wgSeriesReal = !S.wgSeriesReal;
+      $("#wgSeriesMode").textContent = S.wgSeriesReal ? "Real (CPI-deflated)" : "USD @ current FX";
+      drawWages();
+    };
+  }
+  $("#wgSeriesMode").textContent = S.wgSeriesReal ? "Real (CPI-deflated)" : "USD @ current FX";
+
+  $("#wgTable").innerHTML = `<thead><tr><th>Province</th><th>Gross</th><th>As of</th><th>vs CABA</th></tr></thead><tbody>${rows
     .map((r) => {
       const caba = wageProvGross(S.data.labour_provinces.benchmarks.find((b) => b.key === "caba"));
       const ratio = r.w && caba?.gross ? r.w.gross / caba.gross : null;
