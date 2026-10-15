@@ -1,0 +1,29 @@
+{
+  "idVariable": 5,
+  "source_url": "https://api.bcra.gob.ar/estadisticas/v4.0/Monetarias/5",
+  "api_version": "v3.0",
+  "fetched_at": "2026-10-15T14:04:24Z",
+  "error": "HTTPError: 500 Server Error: Internal Server Error for url: https://api.bcra.gob.ar/estadisticas/v3.0/Monetarias/5?limit=1000",
+  "points": [
+    {
+      "date": "2026-10-15",
+      "value": 1535.0
+    }
+  ],
+  "count": 1,
+  "fallback": {
+    "idVariable": 5,
+    "source_url": "https://dolarapi.com/v1/dolares/oficial",
+    "api_version": "dolarapi-fallback",
+    "fetched_at": "2026-10-15T14:04:24Z",
+    "error": null,
+    "points": [
+      {
+        "date": "2026-10-15",
+        "value": 1535.0
+      }
+    ],
+    "count": 1,
+    "note": "Single-day fallback when BCRA estadisticas API unavailable"
+  }
+}

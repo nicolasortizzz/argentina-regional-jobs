@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-10-15T14:04:24Z",
+  "files": [
+    "bcra_fx.json",
+    "labour_provinces.json",
+    "labour_sectors.json",
+    "canasta.json",
+    "cpi_national.json",
+    "energy.json",
+    "exports.json",
+    "ripte.json",
+    "rents.json",
+    "indec_eph_probe.json",
+    "facts.json",
+    "sources.json"
+  ]
+}

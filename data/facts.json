@@ -1,0 +1,97 @@
+{
+  "fetched_at": "2026-10-15T00:00:00Z",
+  "methodology_notes": [
+    "Province focus: Neuquén (Vaca Muerta hub) plus Río Negro, Mendoza, San Juan, Salta, Catamarca, Chubut, Santa Cruz — selected where SIPA registered employment and/or energy/mining production show sustained outperformance vs national averages in the fetch window.",
+    "Affordability net wage: gross registered wage (71.1 series, ARS) minus employee social security (17%: 11% jubilación + 3% PAMI + 3% obra social) minus estimated Ganancias (fourth-category monthly scale for 2026 — approximation from AFIP published brackets; not individualized).",
+    "Patagonia provinces (Neuquén, Río Negro, Chubut, Santa Cruz): additional 22% deduction on taxable income for Ganancias (zona patagónica) applied before tax calculation.",
+    "Single-adult food & basics cost proxy: regional Canasta Básica Total (INDEC) × 0.55 — equivalence factor labeled estimate (official CBT is a reference household basket).",
+    "Household cost proxy: regional CBT at published INDEC family-basket level (no equivalence scaling).",
+    "GBA cost benchmark uses Pampeana regional canasta series where no dedicated GBA CBT series exists in datos.gob.ar (documented caveat).",
+    "Rent inputs: published market survey figures below; not from a machine-readable Zonaprop/Argenprop API."
+  ],
+  "ganancias_2026_approx": {
+    "source_url": "https://www.afip.gob.ar/ganancias/",
+    "label": "Approximate monthly fourth-category scale (ARS, 2026 policy discourse — verify with AFIP tables)",
+    "brackets": [
+      { "up_to": 2000000, "rate": 0 },
+      { "up_to": 2500000, "rate": 0.05 },
+      { "up_to": 3500000, "rate": 0.09 },
+      { "up_to": 5000000, "rate": 0.13 },
+      { "up_to": 8000000, "rate": 0.17 },
+      { "up_to": null, "rate": 0.21 }
+    ],
+    "note": "Simplified progressive schedule for dashboard; actual withholding uses cumulative annual logic and deductions."
+  },
+  "rents_ars_monthly": [
+    {
+      "city": "Neuquén",
+      "type": "2-room apartment",
+      "value": 580000,
+      "as_of": "2025-09",
+      "source_url": "https://www.argenprop.com/noticias/informe-alquileres/",
+      "label": "Published market survey (approx. median band)"
+    },
+    {
+      "city": "Mendoza",
+      "type": "2-room apartment",
+      "value": 520000,
+      "as_of": "2025-09",
+      "source_url": "https://www.argenprop.com/noticias/informe-alquileres/",
+      "label": "Published market survey (approx. median band)"
+    },
+    {
+      "city": "CABA",
+      "type": "2-room apartment",
+      "value": 720000,
+      "as_of": "2025-09",
+      "source_url": "https://www.argenprop.com/noticias/informe-alquileres/",
+      "label": "Published market survey (approx. median band)"
+    },
+    {
+      "city": "Bariloche",
+      "type": "2-room apartment",
+      "value": 490000,
+      "as_of": "2025-09",
+      "source_url": "https://www.argenprop.com/noticias/informe-alquileres/",
+      "label": "Published market survey (approx. median band)"
+    },
+    {
+      "city": "Comodoro Rivadavia",
+      "type": "2-room apartment",
+      "value": 450000,
+      "as_of": "2025-09",
+      "source_url": "https://www.argenprop.com/noticias/informe-alquileres/",
+      "label": "Published market survey (approx. median band)"
+    },
+    {
+      "city": "Salta",
+      "type": "2-room apartment",
+      "value": 380000,
+      "as_of": "2025-09",
+      "source_url": "https://www.argenprop.com/noticias/informe-alquileres/",
+      "label": "Published market survey (approx. median band)"
+    },
+    {
+      "city": "San Juan",
+      "type": "2-room apartment",
+      "value": 410000,
+      "as_of": "2025-09",
+      "source_url": "https://www.argenprop.com/noticias/informe-alquileres/",
+      "label": "Published market survey (approx. median band)"
+    },
+    {
+      "city": "Río Gallegos",
+      "type": "2-room apartment",
+      "value": 420000,
+      "as_of": "2025-09",
+      "source_url": "https://www.argenprop.com/noticias/informe-alquileres/",
+      "label": "Published market survey (approx. median band)"
+    }
+  ],
+  "rigi": {
+    "source_url": "https://www.argentina.gob.ar/noticias/rigi-proyectos-aprobados",
+    "label": "RIGI — large investment regime (count illustrative; verify official registry)",
+    "approved_projects_note": "Use official Ministry of Economy / Jefatura de Gabinete releases for current approved project count; dashboard cites regime as structural demand driver for energy & mining labour."
+  },
+  "selection_rationale": "Growing provinces in this dashboard combine (i) positive multi-year SIPA private registered job growth and (ii) energy/mining or export momentum — Neuquén and Chubut via hydrocarbon basins, Mendoza/San Juan via mining & industry, Salta/Catamarca via mining & services, Santa Cruz via oil & logistics."
+}

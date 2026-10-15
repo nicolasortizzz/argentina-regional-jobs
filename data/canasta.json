@@ -1,0 +1,1763 @@
+{
+  "source_url": "https://apis.datos.gob.ar/series/api/series/",
+  "fetched_at": "2026-10-15T14:04:24Z",
+  "error": null,
+  "series": {
+    "444.1_CANASTA_BARIA_0_0_26_47": [
+      {
+        "date": "2013-02-01",
+        "value": 2645.91
+      },
+      {
+        "date": "2013-04-01",
+        "value": 2702.55
+      },
+      {
+        "date": "2013-05-01",
+        "value": 2713.25
+      },
+      {
+        "date": "2013-06-01",
+        "value": 2773.94
+      },
+      {
+        "date": "2013-07-01",
+        "value": 2879.6
+      },
+      {
+        "date": "2013-08-01",
+        "value": 3016.21
+      },
+      {
+        "date": "2013-10-01",
+        "value": 3203.54
+      },
+      {
+        "date": "2013-11-01",
+        "value": 3260.61
+      },
+      {
+        "date": "2013-12-01",
+        "value": 3354.6
+      },
+      {
+        "date": "2014-01-01",
+        "value": 3446.27
+      },
+      {
+        "date": "2014-03-01",
+        "value": 3834.73
+      },
+      {
+        "date": "2014-04-01",
+        "value": 3884.04
+      },
+      {
+        "date": "2014-05-01",
+        "value": 3916.44
+      },
+      {
+        "date": "2014-07-01",
+        "value": 4035.07
+      },
+      {
+        "date": "2014-08-01",
+        "value": 4111.16
+      },
+      {
+        "date": "2014-09-01",
+        "value": 4202.59
+      },
+      {
+        "date": "2014-10-01",
+        "value": 4299.08
+      },
+      {
+        "date": "2014-11-01",
+        "value": 4354.29
+      },
+      {
+        "date": "2015-02-01",
+        "value": 4569.9
+      },
+      {
+        "date": "2015-03-01",
+        "value": 4624.77
+      },
+      {
+        "date": "2015-04-01",
+        "value": 4693.79
+      },
+      {
+        "date": "2015-06-01",
+        "value": 4791.7
+      },
+      {
+        "date": "2015-08-01",
+        "value": 5074.16
+      },
+      {
+        "date": "2015-10-01",
+        "value": 5189.62
+      },
+      {
+        "date": "2015-12-01",
+        "value": 5467.03
+      },
+      {
+        "date": "2016-01-01",
+        "value": 5741.4
+      },
+      {
+        "date": "2016-03-01",
+        "value": 6256.86
+      },
+      {
+        "date": "2016-05-01",
+        "value": 6622.1
+      },
+      {
+        "date": "2016-07-01",
+        "value": 7162.72
+      },
+      {
+        "date": "2016-09-01",
+        "value": 7258.77
+      },
+      {
+        "date": "2016-11-01",
+        "value": 7385.74
+      },
+      {
+        "date": "2016-12-01",
+        "value": 7323.37
+      },
+      {
+        "date": "2017-01-01",
+        "value": 7434.73
+      },
+      {
+        "date": "2017-03-01",
+        "value": 7845.44
+      },
+      {
+        "date": "2017-04-01",
+        "value": 7943.62
+      },
+      {
+        "date": "2017-05-01",
+        "value": 8090.38
+      },
+      {
+        "date": "2017-06-01",
+        "value": 8113.09
+      },
+      {
+        "date": "2017-10-01",
+        "value": 8728.88
+      },
+      {
+        "date": "2017-11-01",
+        "value": 8846.87
+      },
+      {
+        "date": "2018-03-01",
+        "value": 9494.81
+      },
+      {
+        "date": "2018-06-01",
+        "value": 10352.18
+      },
+      {
+        "date": "2018-08-01",
+        "value": 11294.94
+      },
+      {
+        "date": "2018-09-01",
+        "value": 11797.52
+      },
+      {
+        "date": "2018-10-01",
+        "value": 12659.23
+      },
+      {
+        "date": "2018-12-01",
+        "value": 13193.82
+      },
+      {
+        "date": "2019-02-01",
+        "value": 14331.04
+      },
+      {
+        "date": "2019-03-01",
+        "value": 15073.14
+      },
+      {
+        "date": "2019-04-01",
+        "value": 15432.03
+      },
+      {
+        "date": "2019-07-01",
+        "value": 16722.38
+      },
+      {
+        "date": "2019-08-01",
+        "value": 17414.56
+      },
+      {
+        "date": "2019-09-01",
+        "value": 18342.66
+      },
+      {
+        "date": "2019-10-01",
+        "value": 18692.42
+      },
+      {
+        "date": "2019-11-01",
+        "value": 19767.6
+      },
+      {
+        "date": "2019-12-01",
+        "value": 20372.37
+      },
+      {
+        "date": "2020-01-01",
+        "value": 21251.02
+      },
+      {
+        "date": "2020-02-01",
+        "value": 21651.86
+      },
+      {
+        "date": "2020-04-01",
+        "value": 23311.41
+      },
+      {
+        "date": "2020-06-01",
+        "value": 23846.32
+      },
+      {
+        "date": "2020-08-01",
+        "value": 24770.2
+      },
+      {
+        "date": "2020-10-01",
+        "value": 27365.83
+      },
+      {
+        "date": "2021-01-01",
+        "value": 30259.06
+      },
+      {
+        "date": "2021-02-01",
+        "value": 31873.33
+      },
+      {
+        "date": "2021-03-01",
+        "value": 32813.67
+      },
+      {
+        "date": "2021-04-01",
+        "value": 34150.7
+      },
+      {
+        "date": "2021-06-01",
+        "value": 36332.18
+      },
+      {
+        "date": "2021-08-01",
+        "value": 37991.1
+      },
+      {
+        "date": "2021-10-01",
+        "value": 40898.28
+      },
+      {
+        "date": "2022-02-01",
+        "value": 50258.47
+      },
+      {
+        "date": "2022-04-01",
+        "value": 55749.2
+      },
+      {
+        "date": "2022-06-01",
+        "value": 61017.66
+      },
+      {
+        "date": "2022-07-01",
+        "value": 65331.45
+      },
+      {
+        "date": "2022-09-01",
+        "value": 75357.26
+      },
+      {
+        "date": "2022-10-01",
+        "value": 81754.34
+      },
+      {
+        "date": "2023-01-01",
+        "value": 95635.34
+      },
+      {
+        "date": "2023-02-01",
+        "value": 104213.95
+      },
+      {
+        "date": "2023-04-01",
+        "value": 127818.22
+      },
+      {
+        "date": "2023-05-01",
+        "value": 135339.11
+      },
+      {
+        "date": "2023-10-01",
+        "value": 210299.33
+      },
+      {
+        "date": "2023-12-01",
+        "value": 304664.13
+      },
+      {
+        "date": "2024-06-01",
+        "value": 543225.13
+      },
+      {
+        "date": "2024-07-01",
+        "value": 566235.32
+      },
+      {
+        "date": "2024-09-01",
+        "value": 592617.44
+      },
+      {
+        "date": "2025-01-01",
+        "value": 620926.61
+      },
+      {
+        "date": "2025-02-01",
+        "value": 639601.27
+      }
+    ],
+    "444.1_CANASTA_BARIAPatagonia_0_0_26_47": [
+      {
+        "date": "2016-06-01",
+        "value": 1661.42
+      },
+      {
+        "date": "2016-07-01",
+        "value": 1713.67
+      },
+      {
+        "date": "2016-08-01",
+        "value": 1723.86
+      },
+      {
+        "date": "2016-09-01",
+        "value": 1767.89
+      },
+      {
+        "date": "2016-10-01",
+        "value": 1797.44
+      },
+      {
+        "date": "2016-11-01",
+        "value": 1819.64
+      },
+      {
+        "date": "2016-12-01",
+        "value": 1822.96
+      },
+      {
+        "date": "2017-02-01",
+        "value": 1882.42
+      },
+      {
+        "date": "2017-03-01",
+        "value": 1939.76
+      },
+      {
+        "date": "2017-04-01",
+        "value": 1975.67
+      },
+      {
+        "date": "2017-05-01",
+        "value": 1994.94
+      },
+      {
+        "date": "2017-06-01",
+        "value": 2012.13
+      },
+      {
+        "date": "2017-08-01",
+        "value": 2074.38
+      },
+      {
+        "date": "2017-09-01",
+        "value": 2101.72
+      },
+      {
+        "date": "2017-10-01",
+        "value": 2137.17
+      },
+      {
+        "date": "2017-12-01",
+        "value": 2221.58
+      },
+      {
+        "date": "2018-02-01",
+        "value": 2343.56
+      },
+      {
+        "date": "2018-08-01",
+        "value": 2782.76
+      },
+      {
+        "date": "2018-09-01",
+        "value": 3015.31
+      },
+      {
+        "date": "2018-10-01",
+        "value": 3242.01
+      },
+      {
+        "date": "2018-12-01",
+        "value": 3393.87
+      },
+      {
+        "date": "2019-01-01",
+        "value": 3521.68
+      },
+      {
+        "date": "2019-02-01",
+        "value": 3694.36
+      },
+      {
+        "date": "2019-03-01",
+        "value": 3850.73
+      },
+      {
+        "date": "2019-05-01",
+        "value": 3986.32
+      },
+      {
+        "date": "2019-06-01",
+        "value": 4122.05
+      },
+      {
+        "date": "2019-07-01",
+        "value": 4242.66
+      },
+      {
+        "date": "2019-09-01",
+        "value": 4702.18
+      },
+      {
+        "date": "2019-10-01",
+        "value": 4794.87
+      },
+      {
+        "date": "2020-02-01",
+        "value": 5661.46
+      },
+      {
+        "date": "2020-03-01",
+        "value": 5846.78
+      },
+      {
+        "date": "2020-06-01",
+        "value": 5997.44
+      },
+      {
+        "date": "2020-09-01",
+        "value": 6521.0382
+      },
+      {
+        "date": "2020-11-01",
+        "value": 7258.73445
+      },
+      {
+        "date": "2020-12-01",
+        "value": 7630.42365
+      },
+      {
+        "date": "2021-01-01",
+        "value": 8013.80350655789
+      },
+      {
+        "date": "2021-02-01",
+        "value": 8302.356
+      },
+      {
+        "date": "2021-03-01",
+        "value": 8623.27845
+      },
+      {
+        "date": "2021-04-01",
+        "value": 8892.8649
+      },
+      {
+        "date": "2021-06-01",
+        "value": 9411.4827
+      },
+      {
+        "date": "2021-07-01",
+        "value": 9625.75
+      },
+      {
+        "date": "2021-08-01",
+        "value": 9712.26
+      },
+      {
+        "date": "2021-09-01",
+        "value": 9984.09
+      },
+      {
+        "date": "2021-10-01",
+        "value": 10324.08
+      },
+      {
+        "date": "2021-12-01",
+        "value": 11042.69
+      },
+      {
+        "date": "2022-02-01",
+        "value": 12651.85
+      },
+      {
+        "date": "2022-04-01",
+        "value": 14188.15
+      },
+      {
+        "date": "2022-06-01",
+        "value": 15569.67
+      },
+      {
+        "date": "2022-07-01",
+        "value": 16559.79
+      },
+      {
+        "date": "2022-08-01",
+        "value": 17820.85
+      },
+      {
+        "date": "2023-01-01",
+        "value": 24419.21
+      },
+      {
+        "date": "2023-02-01",
+        "value": 27244.43
+      },
+      {
+        "date": "2023-04-01",
+        "value": 31454.94
+      },
+      {
+        "date": "2023-05-01",
+        "value": 32963.38
+      },
+      {
+        "date": "2023-07-01",
+        "value": 37345.3461
+      },
+      {
+        "date": "2023-08-01",
+        "value": 43685.0316
+      },
+      {
+        "date": "2023-09-01",
+        "value": 49639.3245
+      },
+      {
+        "date": "2023-10-01",
+        "value": 53647.7346
+      },
+      {
+        "date": "2023-11-01",
+        "value": 61729.28369999999
+      },
+      {
+        "date": "2023-12-01",
+        "value": 79988.21549999999
+      },
+      {
+        "date": "2024-01-01",
+        "value": 94576.83
+      },
+      {
+        "date": "2024-02-01",
+        "value": 107237.82
+      },
+      {
+        "date": "2024-03-01",
+        "value": 118222.24
+      },
+      {
+        "date": "2024-04-01",
+        "value": 122901.55
+      },
+      {
+        "date": "2024-06-01",
+        "value": 129214.63
+      },
+      {
+        "date": "2024-07-01",
+        "value": 135018.79
+      },
+      {
+        "date": "2024-11-01",
+        "value": 146258.09
+      },
+      {
+        "date": "2024-12-01",
+        "value": 149369.58
+      },
+      {
+        "date": "2025-02-01",
+        "value": 155674.99169999998
+      },
+      {
+        "date": "2025-04-01",
+        "value": 166551.87915
+      },
+      {
+        "date": "2025-06-01",
+        "value": 167468.29919999998
+      },
+      {
+        "date": "2025-07-01",
+        "value": 170829.29
+      },
+      {
+        "date": "2025-09-01",
+        "value": 175412.47
+      },
+      {
+        "date": "2025-10-01",
+        "value": 181342.77
+      }
+    ],
+    "444.1_CANASTA_batotCuyo_0_0_26_47": [
+      {
+        "date": "2016-05-01",
+        "value": 3649.31
+      },
+      {
+        "date": "2016-06-01",
+        "value": 3757.58
+      },
+      {
+        "date": "2016-07-01",
+        "value": 3854.62
+      },
+      {
+        "date": "2016-09-01",
+        "value": 3917.54
+      },
+      {
+        "date": "2016-11-01",
+        "value": 4038.84
+      },
+      {
+        "date": "2016-12-01",
+        "value": 4045.75
+      },
+      {
+        "date": "2017-01-01",
+        "value": 4099.95
+      },
+      {
+        "date": "2017-02-01",
+        "value": 4217.66
+      },
+      {
+        "date": "2017-03-01",
+        "value": 4338.24
+      },
+      {
+        "date": "2017-04-01",
+        "value": 4456.17
+      },
+      {
+        "date": "2017-05-01",
+        "value": 4519.74
+      },
+      {
+        "date": "2017-06-01",
+        "value": 4562.15
+      },
+      {
+        "date": "2017-08-01",
+        "value": 4695.57
+      },
+      {
+        "date": "2017-09-01",
+        "value": 4760.03
+      },
+      {
+        "date": "2017-11-01",
+        "value": 4941.85
+      },
+      {
+        "date": "2017-12-01",
+        "value": 5147.72
+      },
+      {
+        "date": "2018-03-01",
+        "value": 5489.79
+      },
+      {
+        "date": "2018-05-01",
+        "value": 5772.13
+      },
+      {
+        "date": "2018-06-01",
+        "value": 6025.59
+      },
+      {
+        "date": "2018-08-01",
+        "value": 6442.36
+      },
+      {
+        "date": "2018-09-01",
+        "value": 6950.84
+      },
+      {
+        "date": "2018-11-01",
+        "value": 7777.3
+      },
+      {
+        "date": "2018-12-01",
+        "value": 7827.58
+      },
+      {
+        "date": "2019-01-01",
+        "value": 8109.83
+      },
+      {
+        "date": "2019-06-01",
+        "value": 9570.9
+      },
+      {
+        "date": "2019-07-01",
+        "value": 9750.26
+      },
+      {
+        "date": "2019-08-01",
+        "value": 10098.04
+      },
+      {
+        "date": "2019-09-01",
+        "value": 10691.26
+      },
+      {
+        "date": "2019-12-01",
+        "value": 11943.08
+      },
+      {
+        "date": "2020-01-01",
+        "value": 12284.14
+      },
+      {
+        "date": "2020-02-01",
+        "value": 12493.93
+      },
+      {
+        "date": "2020-05-01",
+        "value": 13138.95
+      },
+      {
+        "date": "2020-06-01",
+        "value": 13311.41
+      },
+      {
+        "date": "2020-09-01",
+        "value": 14435.65
+      },
+      {
+        "date": "2020-10-01",
+        "value": 15306.68
+      },
+      {
+        "date": "2020-11-01",
+        "value": 15901.34
+      },
+      {
+        "date": "2020-12-01",
+        "value": 16480.23
+      },
+      {
+        "date": "2021-02-01",
+        "value": 17655.29
+      },
+      {
+        "date": "2021-05-01",
+        "value": 19550.0
+      },
+      {
+        "date": "2021-07-01",
+        "value": 20578.35
+      },
+      {
+        "date": "2021-08-01",
+        "value": 20849.49
+      },
+      {
+        "date": "2021-09-01",
+        "value": 21580.83
+      },
+      {
+        "date": "2021-10-01",
+        "value": 22289.38
+      },
+      {
+        "date": "2022-02-01",
+        "value": 25953.69
+      },
+      {
+        "date": "2022-04-01",
+        "value": 29193.51
+      },
+      {
+        "date": "2022-05-01",
+        "value": 30645.23
+      },
+      {
+        "date": "2022-07-01",
+        "value": 34268.86
+      },
+      {
+        "date": "2022-09-01",
+        "value": 39353.74
+      },
+      {
+        "date": "2022-11-01",
+        "value": 44874.79
+      },
+      {
+        "date": "2022-12-01",
+        "value": 46999.28
+      },
+      {
+        "date": "2023-02-01",
+        "value": 54746.59
+      },
+      {
+        "date": "2023-03-01",
+        "value": 58850.09
+      },
+      {
+        "date": "2023-05-01",
+        "value": 67422.07
+      },
+      {
+        "date": "2023-06-01",
+        "value": 71847.81
+      },
+      {
+        "date": "2023-07-01",
+        "value": 77373.75
+      },
+      {
+        "date": "2023-08-01",
+        "value": 88082.07
+      },
+      {
+        "date": "2023-09-01",
+        "value": 98844.71
+      },
+      {
+        "date": "2023-11-01",
+        "value": 120957.4
+      },
+      {
+        "date": "2023-12-01",
+        "value": 152753.74
+      },
+      {
+        "date": "2024-01-01",
+        "value": 182372.63
+      },
+      {
+        "date": "2024-02-01",
+        "value": 209614.05
+      },
+      {
+        "date": "2024-03-01",
+        "value": 234787.5
+      },
+      {
+        "date": "2024-05-01",
+        "value": 260604.4
+      },
+      {
+        "date": "2024-09-01",
+        "value": 297370.73
+      },
+      {
+        "date": "2024-12-01",
+        "value": 313438.19
+      },
+      {
+        "date": "2025-02-01",
+        "value": 323783.57
+      },
+      {
+        "date": "2025-03-01",
+        "value": 338853.62
+      },
+      {
+        "date": "2025-05-01",
+        "value": 341750.8
+      },
+      {
+        "date": "2025-06-01",
+        "value": 346055.07
+      },
+      {
+        "date": "2025-08-01",
+        "value": 355547.04
+      },
+      {
+        "date": "2025-09-01",
+        "value": 363671.62
+      },
+      {
+        "date": "2025-11-01",
+        "value": 387851.69
+      },
+      {
+        "date": "2025-12-01",
+        "value": 399607.68
+      }
+    ],
+    "444.1_CANASTA_batotNoroeste_0_0_26_47": [
+      {
+        "date": "2016-05-01",
+        "value": 3122.17
+      },
+      {
+        "date": "2016-06-01",
+        "value": 3209.27
+      },
+      {
+        "date": "2016-07-01",
+        "value": 3281.04
+      },
+      {
+        "date": "2016-08-01",
+        "value": 3269.01
+      },
+      {
+        "date": "2016-09-01",
+        "value": 3326.94
+      },
+      {
+        "date": "2016-11-01",
+        "value": 3417.85
+      },
+      {
+        "date": "2016-12-01",
+        "value": 3420.17
+      },
+      {
+        "date": "2017-02-01",
+        "value": 3549.74
+      },
+      {
+        "date": "2017-03-01",
+        "value": 3652.58
+      },
+      {
+        "date": "2017-04-01",
+        "value": 3770.95
+      },
+      {
+        "date": "2017-05-01",
+        "value": 3818.03
+      },
+      {
+        "date": "2017-06-01",
+        "value": 3872.99
+      },
+      {
+        "date": "2017-08-01",
+        "value": 3968.65
+      },
+      {
+        "date": "2017-09-01",
+        "value": 4048.5
+      },
+      {
+        "date": "2017-12-01",
+        "value": 4358.45
+      },
+      {
+        "date": "2018-03-01",
+        "value": 4672.42
+      },
+      {
+        "date": "2018-05-01",
+        "value": 4887.18
+      },
+      {
+        "date": "2018-08-01",
+        "value": 5478.94
+      },
+      {
+        "date": "2018-09-01",
+        "value": 5907.5
+      },
+      {
+        "date": "2018-10-01",
+        "value": 6326.84
+      },
+      {
+        "date": "2018-11-01",
+        "value": 6571.51
+      },
+      {
+        "date": "2018-12-01",
+        "value": 6618.38
+      },
+      {
+        "date": "2019-02-01",
+        "value": 7156.11
+      },
+      {
+        "date": "2019-04-01",
+        "value": 7662.06
+      },
+      {
+        "date": "2019-06-01",
+        "value": 8133.26
+      },
+      {
+        "date": "2019-07-01",
+        "value": 8306.55
+      },
+      {
+        "date": "2019-11-01",
+        "value": 9903.34
+      },
+      {
+        "date": "2019-12-01",
+        "value": 10203.24
+      },
+      {
+        "date": "2020-01-01",
+        "value": 10459.57
+      },
+      {
+        "date": "2020-03-01",
+        "value": 11032.2
+      },
+      {
+        "date": "2020-05-01",
+        "value": 11247.31
+      },
+      {
+        "date": "2020-06-01",
+        "value": 11416.64
+      },
+      {
+        "date": "2020-08-01",
+        "value": 11863.71
+      },
+      {
+        "date": "2020-09-01",
+        "value": 12376.03
+      },
+      {
+        "date": "2020-10-01",
+        "value": 13078.06
+      },
+      {
+        "date": "2020-12-01",
+        "value": 14057.15
+      },
+      {
+        "date": "2021-01-01",
+        "value": 14517.87
+      },
+      {
+        "date": "2021-02-01",
+        "value": 14992.21
+      },
+      {
+        "date": "2021-04-01",
+        "value": 16271.94
+      },
+      {
+        "date": "2021-07-01",
+        "value": 17540.41
+      },
+      {
+        "date": "2021-08-01",
+        "value": 17812.21
+      },
+      {
+        "date": "2021-09-01",
+        "value": 18405.59
+      },
+      {
+        "date": "2021-11-01",
+        "value": 19299.38
+      },
+      {
+        "date": "2022-01-01",
+        "value": 20623.0
+      },
+      {
+        "date": "2022-03-01",
+        "value": 23474.67
+      },
+      {
+        "date": "2022-04-01",
+        "value": 24915.3
+      },
+      {
+        "date": "2022-06-01",
+        "value": 27234.63
+      },
+      {
+        "date": "2022-07-01",
+        "value": 28905.03
+      },
+      {
+        "date": "2022-08-01",
+        "value": 31201.57
+      },
+      {
+        "date": "2022-09-01",
+        "value": 33493.57
+      },
+      {
+        "date": "2022-10-01",
+        "value": 36378.53
+      },
+      {
+        "date": "2022-11-01",
+        "value": 37944.72
+      },
+      {
+        "date": "2022-12-01",
+        "value": 39570.01
+      },
+      {
+        "date": "2023-03-01",
+        "value": 49695.66
+      },
+      {
+        "date": "2023-04-01",
+        "value": 53285.22
+      },
+      {
+        "date": "2023-05-01",
+        "value": 57141.85
+      },
+      {
+        "date": "2023-07-01",
+        "value": 64995.37
+      },
+      {
+        "date": "2023-08-01",
+        "value": 74317.6
+      },
+      {
+        "date": "2023-12-01",
+        "value": 129625.59
+      },
+      {
+        "date": "2024-02-01",
+        "value": 177766.32
+      },
+      {
+        "date": "2024-03-01",
+        "value": 198519.02
+      },
+      {
+        "date": "2024-04-01",
+        "value": 214513.42
+      },
+      {
+        "date": "2024-05-01",
+        "value": 221647.33
+      },
+      {
+        "date": "2024-09-01",
+        "value": 253328.61
+      },
+      {
+        "date": "2024-10-01",
+        "value": 257179.36
+      },
+      {
+        "date": "2024-12-01",
+        "value": 265563.81
+      },
+      {
+        "date": "2025-02-01",
+        "value": 273707.03
+      },
+      {
+        "date": "2025-03-01",
+        "value": 285070.38
+      },
+      {
+        "date": "2025-05-01",
+        "value": 288816.88
+      },
+      {
+        "date": "2025-07-01",
+        "value": 298280.54
+      },
+      {
+        "date": "2025-08-01",
+        "value": 302080.36
+      },
+      {
+        "date": "2025-09-01",
+        "value": 308016.91
+      },
+      {
+        "date": "2025-10-01",
+        "value": 317694.86
+      },
+      {
+        "date": "2025-12-01",
+        "value": 338983.73
+      }
+    ],
+    "444.1_CANASTA_BARIANoroeste_0_0_26_47": [
+      {
+        "date": "2016-04-01",
+        "value": 1333.91
+      },
+      {
+        "date": "2016-05-01",
+        "value": 1369.37
+      },
+      {
+        "date": "2016-06-01",
+        "value": 1413.77
+      },
+      {
+        "date": "2016-08-01",
+        "value": 1459.38
+      },
+      {
+        "date": "2016-10-01",
+        "value": 1516.82
+      },
+      {
+        "date": "2016-11-01",
+        "value": 1532.67
+      },
+      {
+        "date": "2016-12-01",
+        "value": 1526.86
+      },
+      {
+        "date": "2017-01-01",
+        "value": 1541.73
+      },
+      {
+        "date": "2017-03-01",
+        "value": 1623.37
+      },
+      {
+        "date": "2017-05-01",
+        "value": 1681.95
+      },
+      {
+        "date": "2017-09-01",
+        "value": 1783.48
+      },
+      {
+        "date": "2017-11-01",
+        "value": 1852.43
+      },
+      {
+        "date": "2017-12-01",
+        "value": 1870.58
+      },
+      {
+        "date": "2018-01-01",
+        "value": 1915.2
+      },
+      {
+        "date": "2018-02-01",
+        "value": 1969.14
+      },
+      {
+        "date": "2018-04-01",
+        "value": 2000.01
+      },
+      {
+        "date": "2018-08-01",
+        "value": 2361.61
+      },
+      {
+        "date": "2018-09-01",
+        "value": 2557.36
+      },
+      {
+        "date": "2018-11-01",
+        "value": 2844.81
+      },
+      {
+        "date": "2018-12-01",
+        "value": 2852.75
+      },
+      {
+        "date": "2019-01-01",
+        "value": 2954.56
+      },
+      {
+        "date": "2019-03-01",
+        "value": 3270.34
+      },
+      {
+        "date": "2019-04-01",
+        "value": 3316.91
+      },
+      {
+        "date": "2019-06-01",
+        "value": 3490.67
+      },
+      {
+        "date": "2019-08-01",
+        "value": 3734.47
+      },
+      {
+        "date": "2019-09-01",
+        "value": 3940.39
+      },
+      {
+        "date": "2019-10-01",
+        "value": 4016.75
+      },
+      {
+        "date": "2019-11-01",
+        "value": 4287.16
+      },
+      {
+        "date": "2020-01-01",
+        "value": 4607.74
+      },
+      {
+        "date": "2020-02-01",
+        "value": 4715.23
+      },
+      {
+        "date": "2020-03-01",
+        "value": 4903.2
+      },
+      {
+        "date": "2020-04-01",
+        "value": 5032.98
+      },
+      {
+        "date": "2020-05-01",
+        "value": 5021.12
+      },
+      {
+        "date": "2020-06-01",
+        "value": 5074.06
+      },
+      {
+        "date": "2020-08-01",
+        "value": 5272.757600000001
+      },
+      {
+        "date": "2020-10-01",
+        "value": 5864.6016
+      },
+      {
+        "date": "2020-12-01",
+        "value": 6332.0488000000005
+      },
+      {
+        "date": "2021-01-01",
+        "value": 6599.02938026157
+      },
+      {
+        "date": "2021-04-01",
+        "value": 7430.1128
+      },
+      {
+        "date": "2021-06-01",
+        "value": 7922.376
+      },
+      {
+        "date": "2021-08-01",
+        "value": 8208.39
+      },
+      {
+        "date": "2021-11-01",
+        "value": 8934.9
+      },
+      {
+        "date": "2021-12-01",
+        "value": 9263.66
+      },
+      {
+        "date": "2022-01-01",
+        "value": 9682.16
+      },
+      {
+        "date": "2022-02-01",
+        "value": 10580.02
+      },
+      {
+        "date": "2022-03-01",
+        "value": 11285.9
+      },
+      {
+        "date": "2022-05-01",
+        "value": 12536.73
+      },
+      {
+        "date": "2022-06-01",
+        "value": 13093.57
+      },
+      {
+        "date": "2022-07-01",
+        "value": 13830.16
+      },
+      {
+        "date": "2022-08-01",
+        "value": 14857.89
+      },
+      {
+        "date": "2022-10-01",
+        "value": 17489.68
+      },
+      {
+        "date": "2022-11-01",
+        "value": 17983.28
+      },
+      {
+        "date": "2022-12-01",
+        "value": 18753.56
+      },
+      {
+        "date": "2023-01-01",
+        "value": 20247.55
+      },
+      {
+        "date": "2023-03-01",
+        "value": 24601.81
+      },
+      {
+        "date": "2023-07-01",
+        "value": 31398.7344
+      },
+      {
+        "date": "2023-09-01",
+        "value": 41799.0232
+      },
+      {
+        "date": "2023-10-01",
+        "value": 45140.9904
+      },
+      {
+        "date": "2023-11-01",
+        "value": 52206.1936
+      },
+      {
+        "date": "2024-01-01",
+        "value": 79469.17
+      },
+      {
+        "date": "2024-06-01",
+        "value": 110531.83
+      },
+      {
+        "date": "2024-08-01",
+        "value": 118519.71
+      },
+      {
+        "date": "2024-11-01",
+        "value": 123217.27
+      },
+      {
+        "date": "2025-05-01",
+        "value": 140202.3744
+      },
+      {
+        "date": "2025-07-01",
+        "value": 144096.88
+      },
+      {
+        "date": "2025-11-01",
+        "value": 159191.14
+      },
+      {
+        "date": "2025-12-01",
+        "value": 164555.21
+      }
+    ]
+  },
+  "meta": [
+    {
+      "frequency": "month",
+      "start_date": "2013-02-01",
+      "end_date": "2025-12-01"
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Canasta básica alimentaria y total. Ciudad de Buenos Aires",
+        "description": "Valores de la Canasta Básica de Alimentos (CBA) y de la Canasta Básica Total (CBT) para el hogar tipo. Ciudad de Buenos Aires. En pesos corrientes desde 2013",
+        "issued": "2018-09-13",
+        "source": "Instituto de Estadística y Censos - Ciudad Autónoma de Buenos Aires"
+      },
+      "distribution": {
+        "title": "Canasta básica alimentaria y total. Ciudad de Buenos Aires",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/444/distribution/444.1/download/canastas-basicas-ciudad-de-buenos-aires.csv"
+      },
+      "field": {
+        "description": "Canasta Básica Total",
+        "id": "444.1_CANASTA_BATAL_0_0_20_94",
+        "units": "pesos",
+        "representation_mode": "value",
+        "representation_mode_units": "pesos"
+      }
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Canasta básica alimentaria y total. Ciudad de Buenos Aires",
+        "description": "Valores de la Canasta Básica de Alimentos (CBA) y de la Canasta Básica Total (CBT) para el hogar tipo. Ciudad de Buenos Aires. En pesos corrientes desde 2013",
+        "issued": "2018-09-13",
+        "source": "Instituto de Estadística y Censos - Ciudad Autónoma de Buenos Aires"
+      },
+      "distribution": {
+        "title": "Canasta básica alimentaria y total. Ciudad de Buenos Aires",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/444/distribution/444.1/download/canastas-basicas-ciudad-de-buenos-aires.csv"
+      },
+      "field": {
+        "description": "Canasta Básica Alimentaria",
+        "id": "444.1_CANASTA_BARIA_0_0_26_47",
+        "units": "pesos",
+        "representation_mode": "value",
+        "representation_mode_units": "pesos"
+      }
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Canasta básica total. Regiones del país",
+        "description": "Valores de la Canasta Básica Total para el adulto equivalente. Regiones del país. En pesos corrientes desde abril de 2016",
+        "issued": "2018-09-13",
+        "source": "Instituto Nacional de Estadística y Censos (INDEC)"
+      },
+      "distribution": {
+        "title": "Canasta básica total .Regiones del país.",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/446/distribution/446.1/download/canasta-basica-total-regiones-del-pais.csv"
+      },
+      "field": {
+        "description": "Canasta Básica Total. Patagonia",
+        "id": "444.1_CANASTA_batotPatagonia_0_0_26_47",
+        "units": "pesos",
+        "representation_mode": "value",
+        "representation_mode_units": "pesos"
+      }
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Canasta básica alimentaria. Regiones del país",
+        "description": "Valores de la Canasta Básica de Alimentos para el adulto equivalente. Regiones del país. En pesos corrientes desde abril de 2016",
+        "issued": "2018-09-13",
+        "source": "Instituto Nacional de Estadística y Censos (INDEC)"
+      },
+      "distribution": {
+        "title": "Canasta básica alimentaria .Regiones del país.",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/445/distribution/445.1/download/canasta-basica-alimentaria-regiones-del-pais.csv"
+      },
+      "field": {
+        "description": "Canasta Básica Alimentaria. Patagonia",
+        "id": "444.1_CANASTA_BARIAPatagonia_0_0_26_47",
+        "units": "pesos",
+        "representation_mode": "value",
+        "representation_mode_units": "pesos"
+      }
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Canasta básica total. Regiones del país",
+        "description": "Valores de la Canasta Básica Total para el adulto equivalente. Regiones del país. En pesos corrientes desde abril de 2016",
+        "issued": "2018-09-13",
+        "source": "Instituto Nacional de Estadística y Censos (INDEC)"
+      },
+      "distribution": {
+        "title": "Canasta básica total .Regiones del país.",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/446/distribution/446.1/download/canasta-basica-total-regiones-del-pais.csv"
+      },
+      "field": {
+        "description": "Canasta Básica Total. Cuyo",
+        "id": "444.1_CANASTA_batotCuyo_0_0_26_47",
+        "units": "pesos",
+        "representation_mode": "value",
+        "representation_mode_units": "pesos"
+      }
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Canasta básica alimentaria. Regiones del país",
+        "description": "Valores de la Canasta Básica de Alimentos para el adulto equivalente. Regiones del país. En pesos corrientes desde abril de 2016",
+        "issued": "2018-09-13",
+        "source": "Instituto Nacional de Estadística y Censos (INDEC)"
+      },
+      "distribution": {
+        "title": "Canasta básica alimentaria .Regiones del país.",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/445/distribution/445.1/download/canasta-basica-alimentaria-regiones-del-pais.csv"
+      },
+      "field": {
+        "description": "Canasta Básica Alimentaria. Cuyo",
+        "id": "444.1_CANASTA_BARIACuyo_0_0_26_47",
+        "units": "pesos",
+        "representation_mode": "value",
+        "representation_mode_units": "pesos"
+      }
+    },
+    {
+      "frequency": "month",
+      "start_date": "2016-04-01",
+      "end_date": "2025-12-01"
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Canasta básica total. Regiones del país",
+        "description": "Valores de la Canasta Básica Total para el adulto equivalente. Regiones del país. En pesos corrientes desde abril de 2016",
+        "issued": "2018-09-13",
+        "source": "Instituto Nacional de Estadística y Censos (INDEC)"
+      },
+      "distribution": {
+        "title": "Canasta básica total .Regiones del país.",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/446/distribution/446.1/download/canasta-basica-total-regiones-del-pais.csv"
+      },
+      "field": {
+        "description": "Canasta Básica Total. Noroeste",
+        "id": "444.1_CANASTA_batotNoroeste_0_0_26_47",
+        "units": "pesos",
+        "representation_mode": "value",
+        "representation_mode_units": "pesos"
+      }
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Canasta básica alimentaria. Regiones del país",
+        "description": "Valores de la Canasta Básica de Alimentos para el adulto equivalente. Regiones del país. En pesos corrientes desde abril de 2016",
+        "issued": "2018-09-13",
+        "source": "Instituto Nacional de Estadística y Censos (INDEC)"
+      },
+      "distribution": {
+        "title": "Canasta básica alimentaria .Regiones del país.",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/445/distribution/445.1/download/canasta-basica-alimentaria-regiones-del-pais.csv"
+      },
+      "field": {
+        "description": "Canasta Básica Alimentaria. Noroeste",
+        "id": "444.1_CANASTA_BARIANoroeste_0_0_26_47",
+        "units": "pesos",
+        "representation_mode": "value",
+        "representation_mode_units": "pesos"
+      }
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Canasta básica total. Regiones del país",
+        "description": "Valores de la Canasta Básica Total para el adulto equivalente. Regiones del país. En pesos corrientes desde abril de 2016",
+        "issued": "2018-09-13",
+        "source": "Instituto Nacional de Estadística y Censos (INDEC)"
+      },
+      "distribution": {
+        "title": "Canasta básica total .Regiones del país.",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/446/distribution/446.1/download/canasta-basica-total-regiones-del-pais.csv"
+      },
+      "field": {
+        "description": "Canasta Básica Total. Pampeana",
+        "id": "444.1_CANASTA_batotPampeana_0_0_26_47",
+        "units": "pesos",
+        "representation_mode": "value",
+        "representation_mode_units": "pesos"
+      }
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Canasta básica alimentaria. Regiones del país",
+        "description": "Valores de la Canasta Básica de Alimentos para el adulto equivalente. Regiones del país. En pesos corrientes desde abril de 2016",
+        "issued": "2018-09-13",
+        "source": "Instituto Nacional de Estadística y Censos (INDEC)"
+      },
+      "distribution": {
+        "title": "Canasta básica alimentaria .Regiones del país.",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/445/distribution/445.1/download/canasta-basica-alimentaria-regiones-del-pais.csv"
+      },
+      "field": {
+        "description": "Canasta Básica Alimentaria. Pampeana",
+        "id": "444.1_CANASTA_BARIAPampeana_0_0_26_47",
+        "units": "pesos",
+        "representation_mode": "value",
+        "representation_mode_units": "pesos"
+      }
+    }
+  ],
+  "label": "INDEC canasta básica por región",
+  "ids": [
+    "444.1_CANASTA_BATAL_0_0_20_94",
+    "444.1_CANASTA_BARIA_0_0_26_47",
+    "444.1_CANASTA_batotPatagonia_0_0_26_47",
+    "444.1_CANASTA_BARIAPatagonia_0_0_26_47",
+    "444.1_CANASTA_batotCuyo_0_0_26_47",
+    "444.1_CANASTA_BARIACuyo_0_0_26_47",
+    "444.1_CANASTA_batotNoroeste_0_0_26_47",
+    "444.1_CANASTA_BARIANoroeste_0_0_26_47",
+    "444.1_CANASTA_batotPampeana_0_0_26_47",
+    "444.1_CANASTA_BARIAPampeana_0_0_26_47"
+  ],
+  "series_count": 5,
+  "mapping": {
+    "national_cbt": "444.1_CANASTA_BATAL_0_0_20_94",
+    "national_cba": "444.1_CANASTA_BARIA_0_0_26_47",
+    "patagonia_cbt": "444.1_CANASTA_batotPatagonia_0_0_26_47",
+    "patagonia_cba": "444.1_CANASTA_BARIAPatagonia_0_0_26_47",
+    "cuyo_cbt": "444.1_CANASTA_batotCuyo_0_0_26_47",
+    "cuyo_cba": "444.1_CANASTA_BARIACuyo_0_0_26_47",
+    "noroeste_cbt": "444.1_CANASTA_batotNoroeste_0_0_26_47",
+    "noroeste_cba": "444.1_CANASTA_BARIANoroeste_0_0_26_47",
+    "pampeana_cbt": "444.1_CANASTA_batotPampeana_0_0_26_47",
+    "pampeana_cba": "444.1_CANASTA_BARIAPampeana_0_0_26_47"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "source_url": "https://apis.datos.gob.ar/series/api/series/",
+  "fetched_at": "2026-10-15T14:04:24Z",
+  "error": null,
+  "series": {
+    "158.1_REPTE_0_0_5": []
+  },
+  "meta": [
+    {
+      "frequency": "month"
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Remuneración imponible promedio de los trabajadores estables (RIPTE)",
+        "description": "Remuneración imponible promedio de los trabajadores estables (RIPTE). Total país en pesos",
+        "issued": "2017-09-28",
+        "source": "Secretaría de Trabajo, Empleo y Seguridad Social, Ministerio de Capital Humano"
+      },
+      "distribution": {
+        "title": "Remuneración imponible promedio de los trabajadores estables RIPTE. Total país en pesos. Serie mensual",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/158/distribution/158.1/download/remuneracion-imponible-promedio-trabajadores-estables-ripte-total-pais-pesos-serie-mensual.csv"
+      },
+      "field": {
+        "description": "Remuneración imponible promedio de los trabajadores estables (RIPTE)",
+        "id": "158.1_REPTE_0_0_5",
+        "units": "Pesos corrientes",
+        "representation_mode": "value",
+        "representation_mode_units": "Pesos corrientes"
+      }
+    }
+  ],
+  "label": "RIPTE national benchmark wage index",
+  "ids": [
+    "158.1_REPTE_0_0_5"
+  ],
+  "series_count": 0
+}

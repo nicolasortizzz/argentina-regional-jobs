@@ -1,0 +1,676 @@
+{
+  "source_url": "https://apis.datos.gob.ar/series/api/series/",
+  "fetched_at": "2026-10-15T14:04:24Z",
+  "error": null,
+  "series": {
+    "155.1_MRIA_PELEO_C_0_0_16": [
+      {
+        "date": "1996-01-01",
+        "value": 34302.25
+      },
+      {
+        "date": "1997-01-01",
+        "value": 37021.25
+      },
+      {
+        "date": "1998-01-01",
+        "value": 38430.25
+      },
+      {
+        "date": "1999-01-01",
+        "value": 35251.75
+      },
+      {
+        "date": "2000-01-01",
+        "value": 36796.5
+      },
+      {
+        "date": "2001-01-01",
+        "value": 37652.0
+      },
+      {
+        "date": "2002-01-01",
+        "value": 35259.75
+      },
+      {
+        "date": "2003-01-01",
+        "value": 38694.25
+      },
+      {
+        "date": "2004-01-01",
+        "value": 44311.0
+      },
+      {
+        "date": "2005-01-01",
+        "value": 50804.0
+      },
+      {
+        "date": "2006-01-01",
+        "value": 56612.0
+      },
+      {
+        "date": "2007-01-01",
+        "value": 63888.0
+      },
+      {
+        "date": "2008-01-01",
+        "value": 69987.25
+      },
+      {
+        "date": "2009-01-01",
+        "value": 68636.75
+      },
+      {
+        "date": "2010-01-01",
+        "value": 70455.0
+      },
+      {
+        "date": "2011-01-01",
+        "value": 74555.25
+      },
+      {
+        "date": "2012-01-01",
+        "value": 78167.0
+      },
+      {
+        "date": "2013-01-01",
+        "value": 81350.25
+      },
+      {
+        "date": "2014-01-01",
+        "value": 87473.0
+      },
+      {
+        "date": "2015-01-01",
+        "value": 90615.0
+      },
+      {
+        "date": "2016-01-01",
+        "value": 85711.0
+      },
+      {
+        "date": "2017-01-01",
+        "value": 81582.25
+      },
+      {
+        "date": "2018-01-01",
+        "value": 84671.75
+      },
+      {
+        "date": "2019-01-01",
+        "value": 89566.75
+      },
+      {
+        "date": "2020-01-01",
+        "value": 85901.75
+      },
+      {
+        "date": "2021-01-01",
+        "value": 85599.75
+      },
+      {
+        "date": "2022-01-01",
+        "value": 90888.25
+      },
+      {
+        "date": "2023-01-01",
+        "value": 97341.75
+      },
+      {
+        "date": "2024-01-01",
+        "value": 100060.5
+      },
+      {
+        "date": "2025-01-01",
+        "value": 94003.75
+      }
+    ],
+    "66.1_M_E_0_A_19": [
+      {
+        "date": "2006-01-01",
+        "value": 102.81
+      },
+      {
+        "date": "2007-01-01",
+        "value": 111.804
+      },
+      {
+        "date": "2008-01-01",
+        "value": 119.32525
+      },
+      {
+        "date": "2009-01-01",
+        "value": 112.58975
+      },
+      {
+        "date": "2010-01-01",
+        "value": 117.4835
+      },
+      {
+        "date": "2011-01-01",
+        "value": 126.59175000000002
+      },
+      {
+        "date": "2012-01-01",
+        "value": 129.70325
+      },
+      {
+        "date": "2013-01-01",
+        "value": 131.656
+      },
+      {
+        "date": "2014-01-01",
+        "value": 129.97825
+      }
+    ],
+    "155.1_CTRUCCIION_C_0_0_12": [
+      {
+        "date": "1996-01-01",
+        "value": 196772.5
+      },
+      {
+        "date": "1997-01-01",
+        "value": 242539.75
+      },
+      {
+        "date": "1998-01-01",
+        "value": 266323.25
+      },
+      {
+        "date": "1999-01-01",
+        "value": 268573.0
+      },
+      {
+        "date": "2000-01-01",
+        "value": 231116.5
+      },
+      {
+        "date": "2001-01-01",
+        "value": 205849.0
+      },
+      {
+        "date": "2002-01-01",
+        "value": 123372.75
+      },
+      {
+        "date": "2003-01-01",
+        "value": 157423.75
+      },
+      {
+        "date": "2004-01-01",
+        "value": 213737.75
+      },
+      {
+        "date": "2005-01-01",
+        "value": 292784.0
+      },
+      {
+        "date": "2006-01-01",
+        "value": 360351.0
+      },
+      {
+        "date": "2007-01-01",
+        "value": 420421.25
+      },
+      {
+        "date": "2008-01-01",
+        "value": 426820.25
+      },
+      {
+        "date": "2009-01-01",
+        "value": 394400.75
+      },
+      {
+        "date": "2010-01-01",
+        "value": 397926.75
+      },
+      {
+        "date": "2011-01-01",
+        "value": 438435.75
+      },
+      {
+        "date": "2012-01-01",
+        "value": 429920.0
+      },
+      {
+        "date": "2013-01-01",
+        "value": 427850.75
+      },
+      {
+        "date": "2014-01-01",
+        "value": 426575.75
+      },
+      {
+        "date": "2015-01-01",
+        "value": 455643.75
+      },
+      {
+        "date": "2016-01-01",
+        "value": 417629.5
+      },
+      {
+        "date": "2017-01-01",
+        "value": 454344.0
+      },
+      {
+        "date": "2018-01-01",
+        "value": 470089.0
+      },
+      {
+        "date": "2019-01-01",
+        "value": 452367.25
+      },
+      {
+        "date": "2020-01-01",
+        "value": 351330.5
+      },
+      {
+        "date": "2021-01-01",
+        "value": 385754.25
+      },
+      {
+        "date": "2022-01-01",
+        "value": 447328.75
+      },
+      {
+        "date": "2023-01-01",
+        "value": 477135.0
+      },
+      {
+        "date": "2024-01-01",
+        "value": 394705.25
+      },
+      {
+        "date": "2025-01-01",
+        "value": 394431.0
+      }
+    ],
+    "66.1_C_E_0_A_12": [
+      {
+        "date": "2006-01-01",
+        "value": 352.575
+      },
+      {
+        "date": "2007-01-01",
+        "value": 408.3095
+      },
+      {
+        "date": "2008-01-01",
+        "value": 414.249
+      },
+      {
+        "date": "2009-01-01",
+        "value": 382.60975
+      },
+      {
+        "date": "2010-01-01",
+        "value": 384.20175
+      },
+      {
+        "date": "2011-01-01",
+        "value": 424.27475
+      },
+      {
+        "date": "2012-01-01",
+        "value": 418.90825
+      },
+      {
+        "date": "2013-01-01",
+        "value": 413.97025
+      },
+      {
+        "date": "2014-01-01",
+        "value": 411.15625
+      }
+    ],
+    "66.1_TAC_E_0_A_40": [
+      {
+        "date": "2006-01-01",
+        "value": 406.385
+      },
+      {
+        "date": "2007-01-01",
+        "value": 439.735
+      },
+      {
+        "date": "2008-01-01",
+        "value": 477.734
+      },
+      {
+        "date": "2009-01-01",
+        "value": 478.94925
+      },
+      {
+        "date": "2010-01-01",
+        "value": 492.93275
+      },
+      {
+        "date": "2011-01-01",
+        "value": 513.826
+      },
+      {
+        "date": "2012-01-01",
+        "value": 525.21525
+      },
+      {
+        "date": "2013-01-01",
+        "value": 530.4647500000001
+      },
+      {
+        "date": "2014-01-01",
+        "value": 532.66675
+      }
+    ],
+    "324.1_J_INTERMEDADO__65": [
+      {
+        "date": "2016-01-01",
+        "value": 259.87466666666666
+      },
+      {
+        "date": "2017-01-01",
+        "value": 258.24224556202216
+      },
+      {
+        "date": "2018-01-01",
+        "value": 258.06366146869556
+      },
+      {
+        "date": "2019-01-01",
+        "value": 255.17281947128484
+      },
+      {
+        "date": "2021-01-01",
+        "value": 248.02844493591073
+      },
+      {
+        "date": "2024-01-01",
+        "value": 244.13213700855718
+      }
+    ],
+    "323.1_J_INTERMEDADO__59": [
+      {
+        "date": "2018-01-01",
+        "value": 278953.1800625654
+      },
+      {
+        "date": "2020-01-01",
+        "value": 561767.5268365627
+      },
+      {
+        "date": "2022-01-01",
+        "value": 1405907.8874667138
+      },
+      {
+        "date": "2023-01-01",
+        "value": 3349907.653411609
+      },
+      {
+        "date": "2025-01-01",
+        "value": 15949279.456128236
+      }
+    ],
+    "66.1_AIEA_E_0_A_48": [
+      {
+        "date": "2008-01-01",
+        "value": 809.0930000000001
+      },
+      {
+        "date": "2013-01-01",
+        "value": 867.1977499999999
+      },
+      {
+        "date": "2014-01-01",
+        "value": 860.0405
+      }
+    ]
+  },
+  "meta": [
+    {
+      "frequency": "year",
+      "start_date": "1996-01-01",
+      "end_date": "2025-01-01"
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Empleo registrado del sector privado, por sector de actividad.",
+        "description": "Empleo registrado del sector privado por sector de actividad. Cantidad de puestos de trabajo",
+        "issued": "2017-09-28",
+        "source": "Secretaría de Trabajo, Empleo y Seguridad Social, Ministerio de Capital Humano"
+      },
+      "distribution": {
+        "title": "Empleo registrado del sector privado por sector de actividad. Valores con estacionalidad",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/155/distribution/155.1/download/empleo-registrado-sector-privado-por-actividad-estacionalidad.csv"
+      },
+      "field": {
+        "description": "Empleo registrado. Sector Privado. Minería y Petróleo.",
+        "id": "155.1_MRIA_PELEO_C_0_0_16",
+        "units": "Puestos de trabajo",
+        "representation_mode": "value",
+        "representation_mode_units": "Puestos de trabajo"
+      }
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Puestos de trabajo declarados  por sector de actividad económica",
+        "description": "Puestos de trabajo declarados por sector de actividad económica. Total del país. En miles de puestos. Datos en valores trimestrales",
+        "issued": "2017-09-28",
+        "source": "Instituto Nacional de Estadística y Censos (INDEC)"
+      },
+      "distribution": {
+        "title": "Puestos de trabajo por sector de actividad económica  Miles de puestos. Valores anuales",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/66/distribution/66.1/download/puestos-trabajo-por-sector-actividad-economica-anual-miles-puestos.csv"
+      },
+      "field": {
+        "description": "Miles de puestos de trabajo declarados. Maquinarias y equipos",
+        "id": "66.1_M_E_0_A_19",
+        "units": "Miles de personas",
+        "representation_mode": "value",
+        "representation_mode_units": "Miles de personas"
+      }
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Empleo registrado del sector privado, por sector de actividad.",
+        "description": "Empleo registrado del sector privado por sector de actividad. Cantidad de puestos de trabajo",
+        "issued": "2017-09-28",
+        "source": "Secretaría de Trabajo, Empleo y Seguridad Social, Ministerio de Capital Humano"
+      },
+      "distribution": {
+        "title": "Empleo registrado del sector privado por sector de actividad. Valores con estacionalidad",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/155/distribution/155.1/download/empleo-registrado-sector-privado-por-actividad-estacionalidad.csv"
+      },
+      "field": {
+        "description": "Empleo registrado. Sector Privado. Construcción.",
+        "id": "155.1_CTRUCCIION_C_0_0_12",
+        "units": "Puestos de trabajo",
+        "representation_mode": "value",
+        "representation_mode_units": "Puestos de trabajo"
+      }
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Puestos de trabajo declarados  por sector de actividad económica",
+        "description": "Puestos de trabajo declarados por sector de actividad económica. Total del país. En miles de puestos. Datos en valores trimestrales",
+        "issued": "2017-09-28",
+        "source": "Instituto Nacional de Estadística y Censos (INDEC)"
+      },
+      "distribution": {
+        "title": "Puestos de trabajo por sector de actividad económica  Miles de puestos. Valores anuales",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/66/distribution/66.1/download/puestos-trabajo-por-sector-actividad-economica-anual-miles-puestos.csv"
+      },
+      "field": {
+        "description": "Miles de puestos de trabajo declarados. Construccion",
+        "id": "66.1_C_E_0_A_12",
+        "units": "Miles de personas",
+        "representation_mode": "value",
+        "representation_mode_units": "Miles de personas"
+      }
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Asalariados registrados del sector privado, por rama de actividad de la ocupación principal.",
+        "description": "Total de asalariados registrados del sector privado según rama de actividad de la ocupación principal, en miles. Base 2009",
+        "issued": "2017-09-28",
+        "source": "Secretaría de Trabajo, Empleo y Seguridad Social, Ministerio de Capital Humano"
+      },
+      "distribution": {
+        "title": "Asalariados registrados del sector privado, por rama de actividad de la ocupacion. Base 2009. Valores mensuales",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/152/distribution/152.1/download/asalariados-registrados-sector-privado-segun-rama-actividad-ocupacion-mensual-base-2009.csv"
+      },
+      "field": {
+        "description": "Asalariados. Sector privado. Transporte, almacen y comunicación. Con estacionalidad.",
+        "id": "152.1_TSPORTEEST_2009_M_35",
+        "units": "Miles de Personas",
+        "representation_mode": "value",
+        "representation_mode_units": "Miles de Personas"
+      }
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Puestos de trabajo declarados  por sector de actividad económica",
+        "description": "Puestos de trabajo declarados por sector de actividad económica. Total del país. En miles de puestos. Datos en valores trimestrales",
+        "issued": "2017-09-28",
+        "source": "Instituto Nacional de Estadística y Censos (INDEC)"
+      },
+      "distribution": {
+        "title": "Puestos de trabajo por sector de actividad económica  Miles de puestos. Valores anuales",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/66/distribution/66.1/download/puestos-trabajo-por-sector-actividad-economica-anual-miles-puestos.csv"
+      },
+      "field": {
+        "description": "Miles de puestos de trabajo declarados. Transporte, Almacenamiento y Comunicaciones",
+        "id": "66.1_TAC_E_0_A_40",
+        "units": "Miles de personas",
+        "representation_mode": "value",
+        "representation_mode_units": "Miles de personas"
+      }
+    },
+    {
+      "frequency": "year",
+      "start_date": "2008-01-01",
+      "end_date": "2025-01-01"
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Insumo de mano de obra por sector de actividad económica",
+        "description": "Insumo de mano de obra por sector de actividad económica. Puestos de trabajo en miles",
+        "issued": "2017-11-13",
+        "source": "Instituto Nacional de Estadística y Censos (INDEC)"
+      },
+      "distribution": {
+        "title": "Insumo de mano de obra por sector de actividad económica. Datos trimestrales.",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/324/distribution/324.1/download/insumo-de-mano-de-obra-por-sector-de-actividad-economica-datos-trimestrales.csv"
+      },
+      "field": {
+        "description": "j intermediacion financiera puestos trabajo asalariado registrado",
+        "id": "324.1_J_INTERMEDADO__65",
+        "units": "En millones de pesos",
+        "representation_mode": "value",
+        "representation_mode_units": "En millones de pesos"
+      }
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Componentes del VAB por sector de actividad económica",
+        "description": "Componentes del Valor Agregado Bruto (VAB) por sector de actividad económica, en millones de pesos.",
+        "issued": "2017-11-13",
+        "source": "Instituto Nacional de Estadística y Censos (INDEC)"
+      },
+      "distribution": {
+        "title": "Componentes del VAB por sector de actividad económica. Datos trimestrales.",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/323/distribution/323.1/download/distribucion-funcional-del-ingreso-respecto-al-pib-a-precios-basicos-por-rama-de-actividad.csv"
+      },
+      "field": {
+        "description": "J -Intermediacion financiera Remuneracion al trabajo asalariado",
+        "id": "323.1_J_INTERMEDADO__59",
+        "units": "En millones de pesos",
+        "representation_mode": "value",
+        "representation_mode_units": "En millones de pesos"
+      }
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Puestos de trabajo declarados  por sector de actividad económica",
+        "description": "Puestos de trabajo declarados por sector de actividad económica. Total del país. En miles de puestos. Datos en valores trimestrales",
+        "issued": "2017-09-28",
+        "source": "Instituto Nacional de Estadística y Censos (INDEC)"
+      },
+      "distribution": {
+        "title": "Puestos de trabajo por sector de actividad económica  Miles de puestos. Valores anuales",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/66/distribution/66.1/download/puestos-trabajo-por-sector-actividad-economica-anual-miles-puestos.csv"
+      },
+      "field": {
+        "description": "Miles de puestos de trabajo declarados. Actividades Inmobiliarias, Empresariales y de Alquiler",
+        "id": "66.1_AIEA_E_0_A_48",
+        "units": "Miles de personas",
+        "representation_mode": "value",
+        "representation_mode_units": "Miles de personas"
+      }
+    }
+  ],
+  "label": "Registered employment by sector (national)",
+  "ids": [
+    "155.1_MRIA_PELEO_C_0_0_16",
+    "66.1_M_E_0_A_19",
+    "155.1_CTRUCCIION_C_0_0_12",
+    "66.1_C_E_0_A_12",
+    "152.1_TSPORTEEST_2009_M_35",
+    "66.1_TAC_E_0_A_40",
+    "324.1_J_INTERMEDADO__65",
+    "323.1_J_INTERMEDADO__59",
+    "66.1_AIEA_E_0_A_48"
+  ],
+  "series_count": 8,
+  "sectors": {
+    "mining_oil": {
+      "label": "Mining & oil/gas (registered, private)",
+      "employment_id": "155.1_MRIA_PELEO_C_0_0_16",
+      "employment_national_id": "66.1_M_E_0_A_19"
+    },
+    "construction": {
+      "label": "Construction",
+      "employment_id": "155.1_CTRUCCIION_C_0_0_12",
+      "employment_national_id": "66.1_C_E_0_A_12"
+    },
+    "logistics": {
+      "label": "Transport, storage & communications",
+      "employment_id": "152.1_TSPORTEEST_2009_M_35",
+      "employment_national_id": "66.1_TAC_E_0_A_40"
+    },
+    "financial": {
+      "label": "Financial intermediation",
+      "employment_id": "324.1_J_INTERMEDADO__65",
+      "wage_id": "323.1_J_INTERMEDADO__59"
+    },
+    "professional": {
+      "label": "Business & professional services",
+      "employment_id": "66.1_AIEA_E_0_A_48"
+    }
+  }
+}

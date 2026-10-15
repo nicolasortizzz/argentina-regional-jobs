@@ -1,0 +1,370 @@
+{
+  "source_url": "https://apis.datos.gob.ar/series/api/series/",
+  "fetched_at": "2026-10-15T14:04:24Z",
+  "error": null,
+  "series": {
+    "350.1_MENDOZA_TOOZA__21": [
+      {
+        "date": "1993-01-01",
+        "value": 471.8453
+      },
+      {
+        "date": "1994-01-01",
+        "value": 460.503545
+      },
+      {
+        "date": "1995-01-01",
+        "value": 728.203325
+      },
+      {
+        "date": "1996-01-01",
+        "value": 657.042784
+      },
+      {
+        "date": "1997-01-01",
+        "value": 842.871546
+      },
+      {
+        "date": "1998-01-01",
+        "value": 760.12166
+      },
+      {
+        "date": "1999-01-01",
+        "value": 800.557456
+      },
+      {
+        "date": "2000-01-01",
+        "value": 894.611615
+      },
+      {
+        "date": "2001-01-01",
+        "value": 897.523311
+      },
+      {
+        "date": "2002-01-01",
+        "value": 870.857306
+      },
+      {
+        "date": "2003-01-01",
+        "value": 910.807566
+      },
+      {
+        "date": "2004-01-01",
+        "value": 964.048219
+      },
+      {
+        "date": "2005-01-01",
+        "value": 1047.458756
+      },
+      {
+        "date": "2006-01-01",
+        "value": 1150.531649
+      },
+      {
+        "date": "2007-01-01",
+        "value": 1353.891073
+      },
+      {
+        "date": "2008-01-01",
+        "value": 1587.5238312700003
+      },
+      {
+        "date": "2009-01-01",
+        "value": 1510.6075850699997
+      },
+      {
+        "date": "2010-01-01",
+        "value": 1696.41192487
+      },
+      {
+        "date": "2011-01-01",
+        "value": 1800.5665735500004
+      },
+      {
+        "date": "2012-01-01",
+        "value": 1807.0248625500008
+      },
+      {
+        "date": "2013-01-01",
+        "value": 1681.5574197999997
+      },
+      {
+        "date": "2014-01-01",
+        "value": 1378.1810201200003
+      },
+      {
+        "date": "2015-01-01",
+        "value": 1334.4792510900004
+      },
+      {
+        "date": "2016-01-01",
+        "value": 1324.83348228
+      },
+      {
+        "date": "2017-01-01",
+        "value": 1350.0
+      },
+      {
+        "date": "2018-01-01",
+        "value": 1522.362
+      },
+      {
+        "date": "2019-01-01",
+        "value": 1454.4445112
+      },
+      {
+        "date": "2020-01-01",
+        "value": 1349.9263832900008
+      },
+      {
+        "date": "2021-01-01",
+        "value": 1612.6676996499998
+      },
+      {
+        "date": "2022-01-01",
+        "value": 1600.73159943
+      },
+      {
+        "date": "2023-01-01",
+        "value": 1310.8243366300003
+      },
+      {
+        "date": "2024-01-01",
+        "value": 1566.2871521700004
+      }
+    ],
+    "350.1_RIO_NEGRO_GRO__25": [
+      {
+        "date": "1993-01-01",
+        "value": 212.788502
+      },
+      {
+        "date": "1994-01-01",
+        "value": 232.566064
+      },
+      {
+        "date": "1995-01-01",
+        "value": 404.014163
+      },
+      {
+        "date": "1996-01-01",
+        "value": 418.913452
+      },
+      {
+        "date": "1997-01-01",
+        "value": 410.115047
+      },
+      {
+        "date": "1998-01-01",
+        "value": 341.629106
+      },
+      {
+        "date": "1999-01-01",
+        "value": 367.813418
+      },
+      {
+        "date": "2000-01-01",
+        "value": 401.710597
+      },
+      {
+        "date": "2001-01-01",
+        "value": 393.481735
+      },
+      {
+        "date": "2002-01-01",
+        "value": 305.864359
+      },
+      {
+        "date": "2003-01-01",
+        "value": 331.595488
+      },
+      {
+        "date": "2004-01-01",
+        "value": 346.131642
+      },
+      {
+        "date": "2005-01-01",
+        "value": 418.808636
+      },
+      {
+        "date": "2006-01-01",
+        "value": 414.824447
+      },
+      {
+        "date": "2007-01-01",
+        "value": 476.410914
+      },
+      {
+        "date": "2008-01-01",
+        "value": 554.30759238
+      },
+      {
+        "date": "2009-01-01",
+        "value": 474.0875634899999
+      },
+      {
+        "date": "2010-01-01",
+        "value": 495.1620234799997
+      },
+      {
+        "date": "2011-01-01",
+        "value": 721.6757260599999
+      },
+      {
+        "date": "2012-01-01",
+        "value": 628.1861269499997
+      },
+      {
+        "date": "2013-01-01",
+        "value": 702.3447260499998
+      },
+      {
+        "date": "2014-01-01",
+        "value": 606.1179951400001
+      },
+      {
+        "date": "2015-01-01",
+        "value": 439.64461548000025
+      },
+      {
+        "date": "2016-01-01",
+        "value": 395.98738049
+      },
+      {
+        "date": "2017-01-01",
+        "value": 378.68
+      },
+      {
+        "date": "2018-01-01",
+        "value": 449.366
+      },
+      {
+        "date": "2019-01-01",
+        "value": 409.1300183799997
+      },
+      {
+        "date": "2020-01-01",
+        "value": 376.32622531
+      },
+      {
+        "date": "2021-01-01",
+        "value": 373.1731100700002
+      },
+      {
+        "date": "2022-01-01",
+        "value": 340.1111316
+      },
+      {
+        "date": "2023-01-01",
+        "value": 485.37740713
+      },
+      {
+        "date": "2024-01-01",
+        "value": 601.02673351
+      }
+    ]
+  },
+  "meta": [
+    {
+      "frequency": "year",
+      "start_date": "1993-01-01",
+      "end_date": "2024-01-01"
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Exportaciones por provincia y rubro",
+        "description": "Datos exportaciones por provincia y rubro",
+        "issued": "2017-12-05",
+        "source": "Instituto Nacional de Estadística y Censos (INDEC)"
+      },
+      "distribution": {
+        "title": "Exportaciones por provincia y rubro. Datos anuales",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/350/distribution/350.1/download/exportaciones-provincia-rubro.csv"
+      },
+      "field": {
+        "description": "Exportaciones neuquen total neuquen",
+        "id": "350.1_NEUQUEN_TOUEN__21",
+        "units": "Millones de dólares",
+        "representation_mode": "value",
+        "representation_mode_units": "Millones de dólares"
+      }
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Exportaciones por provincia y rubro",
+        "description": "Datos exportaciones por provincia y rubro",
+        "issued": "2017-12-05",
+        "source": "Instituto Nacional de Estadística y Censos (INDEC)"
+      },
+      "distribution": {
+        "title": "Exportaciones por provincia y rubro. Datos anuales",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/350/distribution/350.1/download/exportaciones-provincia-rubro.csv"
+      },
+      "field": {
+        "description": "Exportaciones mendoza total mendoza",
+        "id": "350.1_MENDOZA_TOOZA__21",
+        "units": "Millones de dólares",
+        "representation_mode": "value",
+        "representation_mode_units": "Millones de dólares"
+      }
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Exportaciones por provincia y rubro",
+        "description": "Datos exportaciones por provincia y rubro",
+        "issued": "2017-12-05",
+        "source": "Instituto Nacional de Estadística y Censos (INDEC)"
+      },
+      "distribution": {
+        "title": "Exportaciones por provincia y rubro. Datos anuales",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/350/distribution/350.1/download/exportaciones-provincia-rubro.csv"
+      },
+      "field": {
+        "description": "Exportaciones salta total salta",
+        "id": "350.1_SALTA_TOTALTA__17",
+        "units": "Millones de dólares",
+        "representation_mode": "value",
+        "representation_mode_units": "Millones de dólares"
+      }
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Exportaciones por provincia y rubro",
+        "description": "Datos exportaciones por provincia y rubro",
+        "issued": "2017-12-05",
+        "source": "Instituto Nacional de Estadística y Censos (INDEC)"
+      },
+      "distribution": {
+        "title": "Exportaciones por provincia y rubro. Datos anuales",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/350/distribution/350.1/download/exportaciones-provincia-rubro.csv"
+      },
+      "field": {
+        "description": "Exportaciones rio negro total rio negro",
+        "id": "350.1_RIO_NEGRO_GRO__25",
+        "units": "Millones de dólares",
+        "representation_mode": "value",
+        "representation_mode_units": "Millones de dólares"
+      }
+    }
+  ],
+  "label": "INDEC provincial goods exports",
+  "ids": [
+    "350.1_NEUQUEN_TOUEN__21",
+    "350.1_MENDOZA_TOOZA__21",
+    "350.1_SALTA_TOTALTA__17",
+    "350.1_RIO_NEGRO_GRO__25"
+  ],
+  "series_count": 2
+}
