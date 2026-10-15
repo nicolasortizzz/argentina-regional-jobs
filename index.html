@@ -41,16 +41,17 @@
     <div class="card"><h3>Data snapshot</h3><div id="ovSnap" class="prose small"></div></div>
   </div>
   <div class="grid g2">
-    <div class="card"><h3>Registered employment index (national)</h3><div id="ovEmpIdx" class="chart sk"></div></div>
+    <div class="card"><h3>SIPA registered private employment by province (Jun 2023 = 100)</h3><p class="muted small">Missing: Mendoza, Catamarca, CABA. Santa Cruz ends 2024-10.</p><div id="ovEmpIdx" class="chart sk"></div></div>
     <div class="card"><h3>Unemployment rate by benchmark (%)</h3><div id="ovUnemp" class="chart sk"></div></div>
   </div>
 </section>
 
 <section id="provinces" class="tab">
-  <p class="muted small">SIPA/OEDE provincial levels (miles de puestos, sector privado). Series on datos.gob.ar may lag; see Sources.</p>
-  <div class="card"><h3>Registered private employment by province</h3><div id="prEmp" class="chart tall sk"></div></div>
+  <p class="muted small">SIPA registered private employees (thousands, seasonal) from datos.gob.ar 154.1 series. Mendoza, Catamarca, and CABA not in feed; Santa Cruz ends 2024-10.</p>
+  <div class="card"><h3>Registered private employment by province (indexed Jun 2023 = 100)</h3><div id="prEmp" class="chart tall sk"></div></div>
+  <div class="card"><h3>Employment growth since Jun 2023 (%)</h3><div class="tablewrap"><table id="prGrowthTable"></table></div></div>
   <div class="grid g2">
-    <div class="card"><h3>Growth vs first available year (%)</h3><div id="prGrowth" class="chart sk"></div></div>
+    <div class="card"><h3>Employment levels (thousands, latest month)</h3><div id="prGrowth" class="chart sk"></div></div>
     <div class="card"><h3>Energy: Neuquina basin oil production</h3><div id="prEnergy" class="chart sk"></div></div>
   </div>
 </section>

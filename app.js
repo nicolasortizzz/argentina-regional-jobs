@@ -181,6 +181,35 @@ function sectorWageMax(prov, sectorKey) {
   return sec?.max ?? null;
 }
 
+function sipaIndexedSeries(label) {
+  const pts = sipaPts(label);
+  if (!pts.length) return null;
+  const base = sipaValueAt(label, SIPA_INDEX_BASE);
+  if (!base) return null;
+  return {
+    label,
+    base,
+    points: pts.map((p) => ({ date: p.date, value: (p.value / base) * 100, level: p.value })),
+    last: pts[pts.length - 1],
+  };
+}
+
+function sipaGrowthSinceBase(label) {
+  const s = sipaIndexedSeries(label);
+  if (!s?.last) return null;
+  const baseVal = sipaValueAt(label, SIPA_INDEX_BASE);
+  if (!baseVal) return null;
+  return {
+    label,
+    pct: pct(s.last.value, baseVal),
+    from: SIPA_INDEX_BASE,
+    to: s.last.date,
+    latest: s.last.value,
+  };
+}
+
+const SIPA_MISSING = ["Mendoza", "Catamarca", "CABA"];
+
 function analystGross(prov) {
   const keys = ["finance", "it_services", "professional_services"];
   const vals = keys.map((k) => sectorWageMax(prov, k)).filter((v) => v != null && Number.isFinite(v));
@@ -268,7 +297,6 @@ function drawOverview() {
   const provs = S.data.labour_provinces?.provinces || [];
   const neu = provs.find((p) => p.key === "neuquen");
   const nat = S.data.labour_provinces?.benchmarks?.find((b) => b.key === "national");
-  const empNeu = lastPt(ser(neu?.employment_id));
   const unNeu = lastPt(ser(neu?.unemployment_id));
   const unNat = lastPt(ser(nat?.unemployment_id));
   const wNeu = wageProvGross(neu);
@@ -301,8 +329,9 @@ function drawOverview() {
     },
   ]);
 
+  const sipaNeu = sipaPts("Neuquén").pop();
   $("#ovWhy").innerHTML = `<p>${S.data.facts?.selection_rationale || ""}</p>
-    <p>Registered employment in Neuquén (last SIPA point): <b>${empNeu ? fmtNum(empNeu.value, 1) : "—"}</b> thousand private jobs (${empNeu?.date?.slice(0, 4) || "n/a"}).</p>`;
+    <p>Registered employment in Neuquén (SIPA): <b>${sipaNeu ? fmtNum(sipaNeu.value, 1) : "—"}</b> thousand private jobs (${sipaNeu?.date?.slice(0, 7) || "n/a"}).</p>`;
 
   $("#ovSnap").innerHTML = [
     `Manifest generated: <b>${S.data.manifest?.generated_at || "—"}</b>`,
@@ -312,12 +341,17 @@ function drawOverview() {
     .map((x) => `<p>${x}</p>`)
     .join("");
 
-  const empIdx = serAny(S.data.labour_national, "149.1_TL_REGIADO_OCTU_0_16");
-  plot(
-    "ovEmpIdx",
-    [{ x: empIdx.map((p) => p.date), y: empIdx.map((p) => p.value), type: "scatter", mode: "lines", name: "Index" }],
-    { yaxis: { title: "Index" } }
-  );
+  const sipaTraces = provs
+    .map((p) => sipaIndexedSeries(p.label))
+    .filter(Boolean)
+    .map((s) => ({
+      x: s.points.map((p) => p.date),
+      y: s.points.map((p) => p.value),
+      type: "scatter",
+      mode: "lines",
+      name: s.label,
+    }));
+  plot("ovEmpIdx", sipaTraces, { yaxis: { title: "Index (Jun 2023 = 100)" } });
 
   const bench = S.data.labour_provinces?.benchmarks || [];
   const traces = provs
@@ -338,28 +372,41 @@ function drawOverview() {
 
 function drawProvinces() {
   const provs = S.data.labour_provinces?.provinces || [];
-  const traces = provs.map((p) => {
-    const s = ser(p.employment_id);
-    return { x: s.map((x) => x.date), y: s.map((x) => x.value), type: "scatter", mode: "lines+markers", name: p.label };
-  });
-  plot("prEmp", traces, { yaxis: { title: "Thousand jobs" } });
+  const indexed = provs.map((p) => sipaIndexedSeries(p.label)).filter(Boolean);
+  plot(
+    "prEmp",
+    indexed.map((s) => ({
+      x: s.points.map((p) => p.date),
+      y: s.points.map((p) => p.value),
+      type: "scatter",
+      mode: "lines",
+      name: s.label,
+    })),
+    { yaxis: { title: "Index (Jun 2023 = 100)" } }
+  );
 
-  const growth = provs.map((p) => {
-    const s = ser(p.employment_id);
-    if (s.length < 2) return { p, g: null };
-    return { p, g: pct(s[s.length - 1].value, s[0].value) };
-  });
+  const growthRows = provs
+    .map((p) => sipaGrowthSinceBase(p.label))
+    .filter(Boolean)
+    .sort((a, b) => b.pct - a.pct);
+  $("#prGrowthTable").innerHTML = `<thead><tr><th>Province</th><th>Jun 2023</th><th>Latest</th><th>Growth</th><th>Note</th></tr></thead><tbody>${growthRows
+    .map((g) => {
+      const note = g.to === "2024-10" ? "series ends 2024-10" : "";
+      return `<tr><td>${g.label}</td><td>${fmtNum(sipaValueAt(g.label, SIPA_INDEX_BASE), 1)}</td><td>${fmtNum(g.latest, 1)} (${g.to})</td><td class="${g.pct >= 0 ? "up" : "dn"}">${fmtPct(g.pct)}</td><td class="muted small">${note}</td></tr>`;
+    })
+    .join("")}</tbody><caption class="muted small" style="caption-side:bottom;text-align:left;padding-top:6px">Excluded (no SIPA 154.1 in feed): ${SIPA_MISSING.join(", ")}.</caption>`;
+
   plot(
     "prGrowth",
     [
       {
-        x: growth.map((g) => g.p.label),
-        y: growth.map((g) => g.g),
+        x: indexed.map((s) => s.label),
+        y: indexed.map((s) => s.last?.value),
         type: "bar",
-        marker: { color: growth.map((g) => (g.g > 0 ? css("--up") : css("--dn"))) },
+        marker: { color: css("--ac") },
       },
     ],
-    { yaxis: { title: "% change" } }
+    { yaxis: { title: "Thousand jobs (latest month)" } }
   );
 
   const oil = serAny(S.data.energy, "PROD_PET_SESCO_3");
