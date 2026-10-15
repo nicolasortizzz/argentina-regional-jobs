@@ -2,7 +2,8 @@
   "fetched_at": "2026-10-15T00:00:00Z",
   "methodology_notes": [
     "Province focus: Neuquén (Vaca Muerta hub) plus Río Negro, Mendoza, San Juan, Salta, Catamarca, Chubut, Santa Cruz — selected where SIPA registered employment and/or energy/mining production show sustained outperformance vs national averages in the fetch window.",
-    "Affordability net wage: gross registered wage (71.1 series, ARS) minus employee social security (17%: 11% jubilación + 3% PAMI + 3% obra social) minus estimated Ganancias (fourth-category monthly scale for 2026 — approximation from AFIP published brackets; not individualized).",
+    "Affordability net wage: gross OEDE/SIPA provincial average total remuneration (May 2026 for comparisons; June/December include SAC) minus employee social security (17%: 11% jubilación + 3% PAMI + 3% obra social) minus estimated Ganancias (fourth-category monthly scale for 2026 — approximation from AFIP published brackets; not individualized).",
+    "National CPI month-on-month KPI uses INDEC 145.3_INGNACUAL_DICI_M_38 (decimal rate ×100 for display).",
     "Patagonia provinces (Neuquén, Río Negro, Chubut, Santa Cruz): additional 22% deduction on taxable income for Ganancias (zona patagónica) applied before tax calculation.",
     "Single-adult food & basics cost proxy: regional Canasta Básica Total (INDEC) × 0.55 — equivalence factor labeled estimate (official CBT is a reference household basket).",
     "Household cost proxy: regional CBT at published INDEC family-basket level (no equivalence scaling).",
