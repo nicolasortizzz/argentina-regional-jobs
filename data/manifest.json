@@ -11,6 +11,8 @@
     "ripte.json",
     "labour_national.json",
     "oede_xlsx.json",
+    "oede_wages.json",
+    "sipa_employment.json",
     "rents.json",
     "indec_eph_probe.json",
     "facts.json",
