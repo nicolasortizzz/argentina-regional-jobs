@@ -236,6 +236,14 @@ function canastaRegion(prov) {
   };
 }
 
+function adultCbt(prov) {
+  const e = S.data.canasta?.estimates_2026_08 || {};
+  const map = REGION_CANASTA[prov.region] || REGION_CANASTA.Patagonia;
+  if (e[map.cbt]) return e[map.cbt];
+  const c = canastaRegion(prov);
+  return c.cbt?.value || c.pampeana?.value || 0;
+}
+
 function gananciasMonthly(taxable) {
   const br = S.data.facts?.ganancias_2026_approx?.brackets || [];
   let tax = 0;
@@ -259,9 +267,7 @@ function netAffordability(prov, opts, wageFn = wageProvGross) {
   if (prov.patagonia_tax) taxable *= 1 - 0.22;
   const tax = gananciasMonthly(Math.max(0, taxable));
   const net = gross - ss - tax;
-  const c = canastaRegion(prov);
-  const cbt = c.cbt?.value || c.pampeana?.value;
-  const adultFood = cbt ? cbt * 0.55 * opts.flatShare : null;
+  const adultFood = adultCbt(prov) * opts.flatShare;
   const r = rentForCity(prov.rent_city);
   const rent = r ? r.value * opts.rentShare : 0;
   const costs = (adultFood || 0) + rent;
@@ -665,7 +671,24 @@ function drawAffordability() {
     .join("")}</tbody>` + (missing.length ? `<caption style="caption-side:bottom;text-align:left;opacity:.7;padding-top:6px">Excluded (no documented rent data): ${missing.join(", ")}. "rent est." = undocumented placeholder rent.</caption>` : "");
 }
 
+function drawYourOptions() {
+  const Y = S.data.your_options;
+  if (!Y || !$("#yoTable")) return;
+  const o = Y.options;
+  $("#yoMeta").innerHTML = `Target profile: Economics graduate, C1 English, ~3 years in accounting, finance and BI (Excel, Power BI, SQL, Python, SAP, modelling, forecasting). Salary bands: <a href="${Y.salary_source.url}" target="_blank" rel="noopener">${Y.salary_source.name}</a>. FX ${fmtNum(Y.fx.rate, 0)} ARS/USD (${Y.fx.date}).`;
+  const lbl = o.map((r) => `${r.province} · ${r.role.split(" ")[0]} ${r.role.includes("BI") ? "BI" : ""} · ${r.industry}`);
+  plot("yoChart", [
+    { type: "bar", name: "Gross (estimate)", x: lbl, y: o.map((r) => (S.ccy === "ARS" ? r.gross_est : r.gross_est / S.fx)), marker: { color: css("--ac") } },
+    { type: "bar", name: "Monthly savings", x: lbl, y: o.map((r) => (S.ccy === "ARS" ? r.savings : r.savings / S.fx)), marker: { color: css("--up") } },
+  ], { barmode: "group", yaxis: { title: S.ccy === "ARS" ? "ARS / month" : "USD / month" }, xaxis: { tickangle: -35, automargin: true }, legend: { orientation: "h", y: 1.12 } });
+  $("#yoTable").innerHTML = `<thead><tr><th>#</th><th>Province</th><th>Role</th><th>Industry / typical employers</th><th>Randstad SSr band</th><th>Gross est.</th><th>Net</th><th>Rent + CBT</th><th>Savings</th><th>OEDE sector avg (May 2026, all staff)</th></tr></thead><tbody>${o
+    .map((r, i) => `<tr><td>${i + 1}</td><td>${r.province}${r.rent_documented ? "" : ' <span class="tag-estimate">rent est.</span>'}</td><td>${r.role}</td><td>${r.industry}<br><span class="muted small">${r.employers}</span></td><td class="small">${fmtNum(r.randstad_min / 1e6, 2)}–${fmtNum(r.randstad_max / 1e6, 2)}M ARS</td><td>${moneyArs(r.gross_est)}</td><td>${moneyArs(r.net)}</td><td>${moneyArs(r.costs)}</td><td class="${r.savings >= 0 ? "up" : "dn"}">${moneyArs(r.savings)}</td><td class="small">${Object.entries(r.oede_sector_avg_may2026).map(([k, v]) => `${k}: ${fmtNum(v / 1e6, 2)}M`).join("<br>")}</td></tr>`)
+    .join("")}</tbody>`;
+  $("#yoNotes").innerHTML = `<p><b>Method (estimate):</b> ${Y.method}</p><p><b>Reading the OEDE column:</b> OEDE averages cover <i>all</i> registered employees in a sector (field crews, engineers, shift and zone allowances), so they overstate what a corporate finance analyst earns; the Randstad band is the relevant benchmark for the role. Randstad does not split by province or company, and excludes bonuses and benefits. Rent: single 2-room apartment; Río Negro uses Bariloche (upper bound for Alto Valle). Not career or financial advice.</p>`;
+}
+
 function drawProfile() {
+  drawYourOptions();
   const provs = S.data.labour_provinces?.provinces || [];
   const roleKeys = ["finance", "it_services", "professional_services"];
   $("#profText").innerHTML = `<p>Provincial <b>finance</b>, <b>IT services</b>, and <b>professional services</b> remuneration from OEDE/SIPA provincial xlsx (${OEDE_WAGE_LABEL}). Analyst gross wage is the simple average of the three sector means when all are published for a province.</p>
@@ -782,6 +805,7 @@ async function load() {
     "oede_wages",
     "sipa_employment",
     "rents",
+    "your_options",
   ];
   const payload = {};
   for (const f of files) {

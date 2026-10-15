@@ -5,7 +5,7 @@
     "Affordability net wage: gross OEDE/SIPA provincial average total remuneration (May 2026 for comparisons; June/December include SAC) minus employee social security (17%: 11% jubilación + 3% PAMI + 3% obra social) minus estimated Ganancias (fourth-category monthly scale for 2026 — approximation from AFIP published brackets; not individualized).",
     "National CPI month-on-month KPI uses INDEC 145.3_INGNACUAL_DICI_M_38 (decimal rate ×100 for display).",
     "Patagonia provinces (Neuquén, Río Negro, Chubut, Santa Cruz): additional 22% deduction on taxable income for Ganancias (zona patagónica) applied before tax calculation.",
-    "Single-adult food & basics cost proxy: regional Canasta Básica Total (INDEC) × 0.55 — equivalence factor labeled estimate (official CBT is a reference household basket).",
+    "Single-adult basics cost: INDEC Canasta Básica Total per adult equivalent for the region (latest Dec 2025), scaled to Aug 2026 by national CBT growth (estimate).",
     "Household cost proxy: regional CBT at published INDEC family-basket level (no equivalence scaling).",
     "GBA cost benchmark uses Pampeana regional canasta series where no dedicated GBA CBT series exists in datos.gob.ar (documented caveat).",
     "Rent inputs: published market survey figures below; not from a machine-readable Zonaprop/Argenprop API."

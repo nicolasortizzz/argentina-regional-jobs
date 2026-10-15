@@ -42,7 +42,7 @@ python3 -m http.server 8766 &
   - **Catamarca** excluded from affordability rankings (no rent input)
 - **FX:** BCRA estadísticas API variable 5 (wholesale reference / A3500), with **dolarapi** fallback when BCRA errors (`data/bcra_fx.json`). USD wage views convert at **load-date FX only**.
 - **Energy / exports:** datos.gob.ar / Secretaría de Energía production series and provincial export series.
-- **Affordability:** OEDE gross wage (or analyst-sector average on Profile tab), minus 17% employee contributions, simplified **Ganancias 2026** monthly brackets (see `data/facts.json`), **Patagonia −22%** on taxable income where applicable, minus rent + adult-equivalent CBT (×0.55, labeled estimate).
+- **Affordability:** OEDE gross wage (or analyst-sector average on Profile tab), minus 17% employee contributions, simplified **Ganancias 2026** monthly brackets (see `data/facts.json`), **Patagonia −22%** on taxable income where applicable, minus rent + INDEC CBT per adult equivalent (regional Dec 2025 scaled by national CBT growth to Aug 2026 — estimate).
 
 Failed or empty API calls are listed in `data/sources.json` and omitted from charts—never imputed.
 
@@ -72,3 +72,12 @@ Failed or empty API calls are listed in `data/sources.json` and omitted from cha
 [GitHub](https://github.com/nicolasortizzz) · [LinkedIn](https://www.linkedin.com/in/nicolas-ortizzz/)
 
 Educational research only; not tax, employment, or investment advice.
+
+## Your options (Analyst profile tab)
+
+Role × sector × province options for an early semi-senior finance / BI profile (FP&A and management control, BI, accounting, treasury) in oil & gas (Neuquén, Golfo San Jorge, Alto Valle), mining (Santa Cruz), primary aluminium (Chubut) and Cuyo, with CABA as a benchmark. Built by `scripts/your_options.py` → `data/your_options.json`.
+
+- **Salary bands:** Randstad Argentina, *Reporte Salarial Julio 2026* (semi-senior gross monthly min–max by region and industry, as of 30 Jun 2026): https://tendenciasytalento.randstad.com.ar/hubfs/Reporte%20Salarial/Reporte%20Salarial%20Julio%202026%20_%20Randstad%20Argentina.pdf
+- **Point estimate (labelled estimate):** band minimum + 25% of the range, for an early semi-senior profile.
+- **OEDE sector averages** (May 2026) are shown for context only; they cover all registered staff in the sector.
+- **Net and costs:** same method as Affordability tab.
