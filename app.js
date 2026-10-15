@@ -105,7 +105,7 @@ function wageProvGross(prov, extrapolate = true) {
       date = lastPt(cpiIndex())?.date || date;
     }
   }
-  return { gross, date, extrapolated: extrapolate };
+  return { gross, date, extrapolated: extrapolate, raw };
 }
 
 function rentForCity(name) {
@@ -211,7 +211,7 @@ function drawOverview() {
           ? `$${fmtNum(wNeu.gross / S.fx, 0)}`
           : `ARS ${fmtNum(wNeu.gross, 0)}`
         : "—",
-      s: wNeu ? `CPI-scaled from ${wNeu.w.date.slice(0, 4)}` : "",
+      s: wNeu ? `CPI-scaled from ${wNeu.raw?.date?.slice(0, 4) || "—"}` : "",
     },
     {
       l: "National CPI (m/m)",
@@ -330,7 +330,7 @@ function drawWages() {
     .map((r) => {
       const caba = wageProvGross(S.data.labour_provinces.benchmarks.find((b) => b.key === "caba"), true);
       const ratio = r.w && caba?.gross ? r.w.gross / caba.gross : null;
-      return `<tr><td>${r.p.label}</td><td>${r.w ? moneyArs(r.w.gross) : "—"}</td><td>${r.w?.w?.date?.slice(0, 7) || "—"}</td><td>${ratio ? fmtPct((ratio - 1) * 100) : "—"}</td></tr>`;
+      return `<tr><td>${r.p.label}</td><td>${r.w ? moneyArs(r.w.gross) : "—"}</td><td>${r.w?.raw?.date?.slice(0, 7) || "—"}</td><td>${ratio ? fmtPct((ratio - 1) * 100) : "—"}</td></tr>`;
     })
     .join("")}</tbody>`;
 }
