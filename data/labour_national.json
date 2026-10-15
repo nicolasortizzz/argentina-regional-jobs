@@ -1,0 +1,612 @@
+{
+  "source_url": "https://apis.datos.gob.ar/series/api/series/",
+  "fetched_at": "2026-10-15T14:09:18Z",
+  "error": null,
+  "series": {
+    "149.1_TL_REGIADO_OCTU_0_16": [
+      {
+        "date": "2015-10-01",
+        "value": 75.93333333333334
+      },
+      {
+        "date": "2016-01-01",
+        "value": 79.90666666666668
+      },
+      {
+        "date": "2016-04-01",
+        "value": 87.75333333333333
+      },
+      {
+        "date": "2016-07-01",
+        "value": 95.98333333333333
+      },
+      {
+        "date": "2016-10-01",
+        "value": 101.42333333333333
+      },
+      {
+        "date": "2017-01-01",
+        "value": 106.48333333333333
+      },
+      {
+        "date": "2017-04-01",
+        "value": 114.24666666666667
+      },
+      {
+        "date": "2017-07-01",
+        "value": 123.27666666666666
+      },
+      {
+        "date": "2017-10-01",
+        "value": 128.76333333333335
+      },
+      {
+        "date": "2018-01-01",
+        "value": 132.97
+      },
+      {
+        "date": "2018-04-01",
+        "value": 141.39333333333332
+      },
+      {
+        "date": "2018-07-01",
+        "value": 151.59
+      },
+      {
+        "date": "2018-10-01",
+        "value": 165.86
+      },
+      {
+        "date": "2019-01-01",
+        "value": 180.37
+      },
+      {
+        "date": "2019-04-01",
+        "value": 197.84
+      },
+      {
+        "date": "2019-07-01",
+        "value": 219.08333333333334
+      },
+      {
+        "date": "2019-10-01",
+        "value": 238.32333333333335
+      },
+      {
+        "date": "2020-01-01",
+        "value": 268.56
+      },
+      {
+        "date": "2020-04-01",
+        "value": 277.87
+      },
+      {
+        "date": "2020-07-01",
+        "value": 287.49
+      },
+      {
+        "date": "2020-10-01",
+        "value": 313.98
+      },
+      {
+        "date": "2021-01-01",
+        "value": 347.7833333333333
+      },
+      {
+        "date": "2021-04-01",
+        "value": 389.7733333333333
+      },
+      {
+        "date": "2021-07-01",
+        "value": 438.52666666666664
+      },
+      {
+        "date": "2021-10-01",
+        "value": 488.8966666666667
+      },
+      {
+        "date": "2022-01-01",
+        "value": 546.85
+      },
+      {
+        "date": "2022-04-01",
+        "value": 645.1166666666667
+      },
+      {
+        "date": "2022-07-01",
+        "value": 770.5100000000001
+      },
+      {
+        "date": "2022-10-01",
+        "value": 923.5100000000001
+      },
+      {
+        "date": "2023-01-01",
+        "value": 1102.47
+      },
+      {
+        "date": "2023-04-01",
+        "value": 1367.3999999999999
+      },
+      {
+        "date": "2023-07-01",
+        "value": 1779.4966666666667
+      },
+      {
+        "date": "2023-10-01",
+        "value": 2340.016666666667
+      },
+      {
+        "date": "2024-01-01",
+        "value": 3389.4900000000002
+      },
+      {
+        "date": "2024-04-01",
+        "value": 4467.493333333333
+      },
+      {
+        "date": "2024-07-01",
+        "value": 5287.706666666666
+      },
+      {
+        "date": "2024-10-01",
+        "value": 5896.393333333333
+      },
+      {
+        "date": "2025-01-01",
+        "value": 6340.883333333334
+      },
+      {
+        "date": "2025-04-01",
+        "value": 6811.113333333334
+      },
+      {
+        "date": "2025-07-01",
+        "value": 7235.626666666667
+      },
+      {
+        "date": "2025-10-01",
+        "value": 7646.14
+      },
+      {
+        "date": "2026-01-01",
+        "value": 8130.100000000001
+      },
+      {
+        "date": "2026-04-01",
+        "value": 8805.550000000001
+      }
+    ],
+    "156.1_TLTAL_0_0_5": [
+      {
+        "date": "1996-01-01",
+        "value": 3423840.0
+      },
+      {
+        "date": "1996-04-01",
+        "value": 3465073.0
+      },
+      {
+        "date": "1996-07-01",
+        "value": 3527971.0
+      },
+      {
+        "date": "1996-10-01",
+        "value": 3626541.0
+      },
+      {
+        "date": "1997-01-01",
+        "value": 3724041.0
+      },
+      {
+        "date": "1997-04-01",
+        "value": 3775402.0
+      },
+      {
+        "date": "1997-07-01",
+        "value": 3835132.0
+      },
+      {
+        "date": "1997-10-01",
+        "value": 3952561.0
+      },
+      {
+        "date": "1998-01-01",
+        "value": 4055888.0
+      },
+      {
+        "date": "1998-04-01",
+        "value": 4068143.0
+      },
+      {
+        "date": "1998-07-01",
+        "value": 4092630.0
+      },
+      {
+        "date": "1998-10-01",
+        "value": 4118261.0
+      },
+      {
+        "date": "1999-01-01",
+        "value": 4104034.0
+      },
+      {
+        "date": "1999-04-01",
+        "value": 4051654.0
+      },
+      {
+        "date": "1999-07-01",
+        "value": 4011299.0
+      },
+      {
+        "date": "1999-10-01",
+        "value": 4024452.0
+      },
+      {
+        "date": "2000-01-01",
+        "value": 4026312.0
+      },
+      {
+        "date": "2000-04-01",
+        "value": 3967926.0
+      },
+      {
+        "date": "2000-07-01",
+        "value": 3970025.0
+      },
+      {
+        "date": "2000-10-01",
+        "value": 4016230.0
+      },
+      {
+        "date": "2001-01-01",
+        "value": 4035868.0
+      },
+      {
+        "date": "2001-04-01",
+        "value": 3980317.0
+      },
+      {
+        "date": "2001-07-01",
+        "value": 3879255.0
+      },
+      {
+        "date": "2001-10-01",
+        "value": 3785820.0
+      },
+      {
+        "date": "2002-01-01",
+        "value": 3608907.0
+      },
+      {
+        "date": "2002-04-01",
+        "value": 3510132.0
+      },
+      {
+        "date": "2002-07-01",
+        "value": 3468314.0
+      },
+      {
+        "date": "2002-10-01",
+        "value": 3506383.0
+      },
+      {
+        "date": "2003-01-01",
+        "value": 3601781.0
+      },
+      {
+        "date": "2003-04-01",
+        "value": 3667540.0
+      },
+      {
+        "date": "2003-07-01",
+        "value": 3755035.0
+      },
+      {
+        "date": "2003-10-01",
+        "value": 3889463.0
+      },
+      {
+        "date": "2004-01-01",
+        "value": 4017443.0
+      },
+      {
+        "date": "2004-04-01",
+        "value": 4096186.0
+      },
+      {
+        "date": "2004-07-01",
+        "value": 4231699.0
+      },
+      {
+        "date": "2004-10-01",
+        "value": 4387957.0
+      },
+      {
+        "date": "2005-01-01",
+        "value": 4533446.0
+      },
+      {
+        "date": "2005-04-01",
+        "value": 4627209.0
+      },
+      {
+        "date": "2005-07-01",
+        "value": 4719330.0
+      },
+      {
+        "date": "2005-10-01",
+        "value": 4891013.0
+      },
+      {
+        "date": "2006-01-01",
+        "value": 5018118.0
+      },
+      {
+        "date": "2006-04-01",
+        "value": 5077819.0
+      },
+      {
+        "date": "2006-07-01",
+        "value": 5148542.0
+      },
+      {
+        "date": "2006-10-01",
+        "value": 5310697.0
+      },
+      {
+        "date": "2007-01-01",
+        "value": 5446914.0
+      },
+      {
+        "date": "2007-04-01",
+        "value": 5513083.0
+      },
+      {
+        "date": "2007-07-01",
+        "value": 5602656.0
+      },
+      {
+        "date": "2007-10-01",
+        "value": 5781141.0
+      },
+      {
+        "date": "2008-01-01",
+        "value": 5875032.0
+      },
+      {
+        "date": "2008-04-01",
+        "value": 5926702.0
+      },
+      {
+        "date": "2008-07-01",
+        "value": 5934566.0
+      },
+      {
+        "date": "2008-10-01",
+        "value": 5963105.0
+      },
+      {
+        "date": "2009-01-01",
+        "value": 5895609.0
+      },
+      {
+        "date": "2009-04-01",
+        "value": 5801162.0
+      },
+      {
+        "date": "2009-07-01",
+        "value": 5790244.0
+      },
+      {
+        "date": "2009-10-01",
+        "value": 5874250.0
+      },
+      {
+        "date": "2010-01-01",
+        "value": 5940373.0
+      },
+      {
+        "date": "2010-04-01",
+        "value": 5942906.0
+      },
+      {
+        "date": "2010-07-01",
+        "value": 5977240.0
+      },
+      {
+        "date": "2010-10-01",
+        "value": 6099072.0
+      },
+      {
+        "date": "2011-01-01",
+        "value": 6212201.0
+      },
+      {
+        "date": "2011-04-01",
+        "value": 6241352.0
+      },
+      {
+        "date": "2011-07-01",
+        "value": 6278884.0
+      },
+      {
+        "date": "2011-10-01",
+        "value": 6379074.0
+      },
+      {
+        "date": "2012-01-01",
+        "value": 6404471.0
+      },
+      {
+        "date": "2012-04-01",
+        "value": 6339008.0
+      },
+      {
+        "date": "2012-07-01",
+        "value": 6315505.0
+      },
+      {
+        "date": "2012-10-01",
+        "value": 6389117.0
+      },
+      {
+        "date": "2013-01-01",
+        "value": 6441194.0
+      },
+      {
+        "date": "2013-04-01",
+        "value": 6401309.0
+      },
+      {
+        "date": "2013-07-01",
+        "value": 6388640.0
+      },
+      {
+        "date": "2013-10-01",
+        "value": 6445587.0
+      },
+      {
+        "date": "2014-01-01",
+        "value": 6453156.0
+      },
+      {
+        "date": "2014-04-01",
+        "value": 6393749.0
+      },
+      {
+        "date": "2014-07-01",
+        "value": 6397068.0
+      },
+      {
+        "date": "2014-10-01",
+        "value": 6471428.0
+      },
+      {
+        "date": "2015-01-01",
+        "value": 6548985.0
+      },
+      {
+        "date": "2015-04-01",
+        "value": 6560214.0
+      },
+      {
+        "date": "2015-07-01",
+        "value": 6579820.0
+      },
+      {
+        "date": "2015-10-01",
+        "value": 6606846.0
+      },
+      {
+        "date": "2016-01-01",
+        "value": 6596775.0
+      },
+      {
+        "date": "2016-04-01",
+        "value": 6509646.0
+      },
+      {
+        "date": "2016-07-01",
+        "value": 6488976.0
+      },
+      {
+        "date": "2016-10-01",
+        "value": 6548182.0
+      },
+      {
+        "date": "2017-01-01",
+        "value": 6594924.0
+      },
+      {
+        "date": "2017-04-01",
+        "value": 6549267.0
+      },
+      {
+        "date": "2017-07-01",
+        "value": 6572881.0
+      },
+      {
+        "date": "2017-10-01",
+        "value": 6650241.0
+      },
+      {
+        "date": "2018-01-01",
+        "value": 6693705.0
+      },
+      {
+        "date": "2018-04-01",
+        "value": 6619439.0
+      },
+      {
+        "date": "2018-07-01",
+        "value": 6566488.0
+      },
+      {
+        "date": "2018-10-01",
+        "value": 6547293.0
+      },
+      {
+        "date": "2019-01-01",
+        "value": 6547444.0
+      }
+    ]
+  },
+  "meta": [
+    {
+      "frequency": "quarter",
+      "start_date": "1996-01-01",
+      "end_date": "2026-04-01"
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Índice de salarios. Base octubre 2016",
+        "description": "Índice de salarios estimado en función de la evolución de los remuneraciones pagadas en la economía. Base octubre 2016.",
+        "issued": "2017-09-28",
+        "source": "Instituto Nacional de Estadística y Censos (INDEC)"
+      },
+      "distribution": {
+        "title": "Índice de salarios. Base octubre 2016.  Valores mensuales.",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/149/distribution/149.1/download/indice-salarios-periodicidad-mensual-base-octubre-2016.csv"
+      },
+      "field": {
+        "description": "Índice de Salarios. Empleo registrado.",
+        "id": "149.1_TL_REGIADO_OCTU_0_16",
+        "units": "Índice",
+        "representation_mode": "value",
+        "representation_mode_units": "Índice"
+      }
+    },
+    {
+      "catalog": {
+        "title": "Datos Programación Macroeconómica"
+      },
+      "dataset": {
+        "title": "Empleo registrado del sector privado, por rama de actividad",
+        "description": "Empleo registrado del sector privado por rama de actividad. Cantidad de puestos de trabajo",
+        "issued": "2017-09-28",
+        "source": "Ministerio de Trabajo, Empleo y Seguridad Social"
+      },
+      "distribution": {
+        "title": "Empleo registrado del sector privado por rama de actividad. Total puestos de trabajo",
+        "downloadURL": "https://infra.datos.gob.ar/catalog/sspm/dataset/156/distribution/156.1/download/empleo-registrado-sector-privado-por-rama-actividad-total-puestos-trabajo.csv"
+      },
+      "field": {
+        "description": "Total empleo registrado",
+        "id": "156.1_TLTAL_0_0_5",
+        "units": "Puestos de trabajo",
+        "representation_mode": "value",
+        "representation_mode_units": "Puestos de trabajo"
+      }
+    }
+  ],
+  "label": "National registered employment index / level",
+  "ids": [
+    "149.1_TL_REGIADO_OCTU_0_16",
+    "156.1_TLTAL_0_0_5"
+  ],
+  "series_count": 2
+}

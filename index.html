@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Argentina Regional Jobs — Nicolas Ortiz</title>
+<meta name="description" content="Interactive labour-market dashboard: Neuquén (Vaca Muerta) and growing provinces vs national and CABA/GBA benchmarks. Real public data.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%2375acff%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+<header class="top">
+  <div class="brand"><div class="logo">AR</div><div><h1>Nicolas Ortiz — Economist | Financial &amp; Data Analyst</h1><p class="sub">Argentina Regional Jobs · data as of <span id="asof">loading…</span></p></div></div>
+  <div class="actions">
+    <button id="ccy" class="chip" title="Toggle USD / ARS display">USD</button>
+    <button id="theme" class="icon" title="Toggle theme">◐</button>
+    <a class="icon" href="https://github.com/nicolasortizzz" target="_blank" rel="noopener" title="GitHub">GH</a>
+    <a class="icon" href="https://www.linkedin.com/in/nicolas-ortizzz/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+  </div>
+</header>
+<div id="ticker-tape" class="tape"><div class="tape-inner" id="tape"></div></div>
+<nav class="tabs" id="tabs">
+  <button data-tab="overview" class="active">Overview</button>
+  <button data-tab="provinces">Province growth</button>
+  <button data-tab="sectors">Sectors &amp; roles</button>
+  <button data-tab="wages">Wages</button>
+  <button data-tab="col">Cost of living</button>
+  <button data-tab="affordability">Affordability</button>
+  <button data-tab="profile">Analyst profile</button>
+  <button data-tab="scenarios">Scenarios</button>
+  <button data-tab="sources">Sources</button>
+  <span class="ink" id="ink"></span>
+</nav>
+<main>
+<section id="overview" class="tab active">
+  <div class="kpis" id="ovKpis"></div>
+  <div class="grid g2">
+    <div class="card"><h3>Why these provinces?</h3><div id="ovWhy" class="prose"></div></div>
+    <div class="card"><h3>Data snapshot</h3><div id="ovSnap" class="prose small"></div></div>
+  </div>
+  <div class="grid g2">
+    <div class="card"><h3>Registered employment index (national)</h3><div id="ovEmpIdx" class="chart sk"></div></div>
+    <div class="card"><h3>Unemployment rate by benchmark (%)</h3><div id="ovUnemp" class="chart sk"></div></div>
+  </div>
+</section>
+
+<section id="provinces" class="tab">
+  <p class="muted small">SIPA/OEDE provincial levels (miles de puestos, sector privado). Series on datos.gob.ar may lag; see Sources.</p>
+  <div class="card"><h3>Registered private employment by province</h3><div id="prEmp" class="chart tall sk"></div></div>
+  <div class="grid g2">
+    <div class="card"><h3>Growth vs first available year (%)</h3><div id="prGrowth" class="chart sk"></div></div>
+    <div class="card"><h3>Energy: Neuquina basin oil production</h3><div id="prEnergy" class="chart sk"></div></div>
+  </div>
+</section>
+
+<section id="sectors" class="tab">
+  <p class="muted small">National registered employment by broad sector (Ministerio de Trabajo / datos.gob.ar).</p>
+  <div class="card"><h3>Headline sectors (persons, national)</h3><div id="secBars" class="chart tall sk"></div></div>
+  <div class="grid g2">
+    <div class="card"><h3>Mining &amp; oil/gas trend</h3><div id="secOil" class="chart sk"></div></div>
+    <div class="card"><h3>Construction trend</h3><div id="secConst" class="chart sk"></div></div>
+  </div>
+</section>
+
+<section id="wages" class="tab">
+  <p class="muted small">Provincial remuneración total (71.1) with CPI extrapolation to latest national CPI month <span class="tag-estimate">Estimate</span> where noted.</p>
+  <div class="card"><h3>Average gross wage by province (ARS + USD)</h3><div id="wgBar" class="chart tall sk"></div></div>
+  <div class="card"><div class="tablewrap"><table id="wgTable"></table></div></div>
+</section>
+
+<section id="col" class="tab">
+  <div class="grid g2">
+    <div class="card"><h3>Canasta Básica Total by region (INDEC)</h3><div id="colCbt" class="chart sk"></div></div>
+    <div class="card"><h3>Canasta Básica Alimentaria by region</h3><div id="colCba" class="chart sk"></div></div>
+  </div>
+  <div class="card"><h3>Rents by city (published surveys)</h3><div id="colRent" class="prose"></div><div id="colRentChart" class="chart sk"></div></div>
+</section>
+
+<section id="affordability" class="tab">
+  <p class="muted small">Net wage after social security (17%), simplified Ganancias 2026 schedule, Patagonia +22% deduction where applicable; minus rent + food/basic basket proxy.</p>
+  <div class="grid g2">
+    <div class="card"><h3>Interactive assumptions</h3><div id="affSliders" class="vsliders"></div></div>
+    <div class="card"><h3>Monthly net after housing &amp; CBT proxy</h3><div id="affChart" class="chart tall sk"></div></div>
+  </div>
+  <div class="card"><h3>Savings ranking</h3><div class="tablewrap"><table id="affRank"></table></div></div>
+</section>
+
+<section id="profile" class="tab">
+  <div class="grid g2">
+    <div class="card"><h3>Financial &amp; data roles — wage context</h3><div id="profText" class="prose"></div></div>
+    <div class="card"><h3>Financial intermediation remuneration (national)</h3><div id="profWage" class="chart sk"></div></div>
+  </div>
+  <div class="card"><h3>Provincial private wage vs national financial sector</h3><div id="profCmp" class="chart sk"></div></div>
+</section>
+
+<section id="scenarios" class="tab">
+  <p class="muted small">Scenario paths are <span class="tag-estimate">Author's view</span> — illustrative, not forecasts.</p>
+  <div class="grid g2">
+    <div class="card"><h3>Vaca Muerta labour demand index (simulated)</h3><div id="scIdx" class="chart sk"></div></div>
+    <div class="card"><h3>Scenario narrative</h3><div id="scText" class="prose"></div></div>
+  </div>
+  <div class="card"><h2>Conclusion</h2><div id="scConcl" class="prose"></div></div>
+</section>
+
+<section id="sources" class="tab">
+  <div class="card"><h2>Sources &amp; methodology</h2><div id="srcList" class="prose small"></div></div>
+  <div class="card"><h2>Disclaimer</h2><p class="prose">This site is an educational research dashboard. It is <b>not</b> employment, tax, or investment advice. Figures come from public APIs and official releases; publication lags and revisions apply. Estimates, extrapolations, and scenario views are labeled. Verify critical numbers with primary sources before decisions.</p></div>
+</section>
+</main>
+<footer><p id="foot"></p></footer>
+<div id="toast" class="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>

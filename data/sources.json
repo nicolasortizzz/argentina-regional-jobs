@@ -1,57 +1,67 @@
 {
-  "fetched_at": "2026-10-15T14:04:24Z",
+  "fetched_at": "2026-10-15T14:09:18Z",
   "ok": [
     {
       "name": "bcra_fx_wholesale",
       "detail": "HTTPError: 500 Server Error: Internal Server Error for url: https://api.bcra.gob.ar/estadisticas/v3.0/Monetarias/5?limit=1000",
-      "at": "2026-10-15T14:04:24Z"
+      "at": "2026-10-15T14:09:18Z"
     },
     {
       "name": "labour_provinces",
       "detail": "series_ok=30/33",
-      "at": "2026-10-15T14:04:24Z"
+      "at": "2026-10-15T14:09:18Z"
     },
     {
       "name": "labour_sectors",
       "detail": "series_ok=8",
-      "at": "2026-10-15T14:04:24Z"
+      "at": "2026-10-15T14:09:18Z"
     },
     {
       "name": "canasta_regional",
       "detail": "series_ok=5",
-      "at": "2026-10-15T14:04:24Z"
+      "at": "2026-10-15T14:09:18Z"
     },
     {
       "name": "cpi_national",
       "detail": "",
-      "at": "2026-10-15T14:04:24Z"
+      "at": "2026-10-15T14:09:18Z"
     },
     {
       "name": "energy_production",
       "detail": "",
-      "at": "2026-10-15T14:04:24Z"
+      "at": "2026-10-15T14:09:18Z"
     },
     {
       "name": "provincial_exports",
       "detail": "",
-      "at": "2026-10-15T14:04:24Z"
+      "at": "2026-10-15T14:09:18Z"
+    },
+    {
+      "name": "labour_national_index",
+      "detail": "",
+      "at": "2026-10-15T14:09:18Z"
+    },
+    {
+      "name": "oede_xlsx",
+      "detail": "",
+      "at": "2026-10-15T14:09:18Z"
     },
     {
       "name": "rent_portals",
       "detail": "see facts.json for figures",
-      "at": "2026-10-15T14:04:24Z"
+      "at": "2026-10-15T14:09:18Z"
     },
     {
       "name": "indec_eph_xls",
       "detail": "bytes=37465",
-      "at": "2026-10-15T14:04:24Z"
+      "at": "2026-10-15T14:09:18Z"
     }
   ],
   "failed": [
     {
       "name": "ripte",
       "detail": "",
-      "at": "2026-10-15T14:04:24Z"
+      "at": "2026-10-15T14:09:18Z"
     }
   ]
 }

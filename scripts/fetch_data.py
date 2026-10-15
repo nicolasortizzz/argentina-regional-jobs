@@ -374,6 +374,64 @@ def try_rent_index() -> dict:
     return out
 
 
+def parse_oede_trabajo_registrado() -> dict:
+    """Parse Ministerio de Trabajo OEDE xlsx (provincial employment + national wages)."""
+    url = "https://www.argentina.gob.ar/sites/default/files/trabajoregistrado_2607_estadisticas.xlsx"
+    out: dict[str, Any] = {
+        "source_url": url,
+        "fetched_at": ISO,
+        "error": None,
+        "provincial_employment": {},
+        "national_wages": [],
+    }
+    try:
+        import io
+        from datetime import datetime
+
+        from openpyxl import load_workbook
+
+        r = SESSION.get(url, timeout=120)
+        r.raise_for_status()
+        wb = load_workbook(io.BytesIO(r.content), read_only=True, data_only=True)
+        ws = wb["A.5.2"]
+        hdr = None
+        for i, row in enumerate(ws.iter_rows(values_only=True)):
+            if i == 1:
+                hdr = [str(h).replace("\n", " ").strip() if h else "" for h in row]
+                continue
+            if i < 2 or not row or not isinstance(row[0], datetime):
+                continue
+            d = row[0].strftime("%Y-%m-%d")
+            for j, name in enumerate(hdr):
+                if j == 0 or not name:
+                    continue
+                val = row[j]
+                if val is None:
+                    continue
+                out["provincial_employment"].setdefault(name, []).append({"date": d, "value": val})
+        ws4 = wb["A.4"]
+        for row in ws4.iter_rows(min_row=3, values_only=True):
+            if not row or not isinstance(row[0], datetime):
+                continue
+            out["national_wages"].append(
+                {
+                    "date": row[0].strftime("%Y-%m-%d"),
+                    "median_sa": row[1],
+                    "median_nsa": row[2],
+                    "avg_sa": row[3],
+                    "avg_nsa": row[4],
+                }
+            )
+        wb.close()
+        out["note"] = (
+            "Provincial sheet A.5.2 in this file may end before national tables; "
+            "cross-check datos.gob.ar series API for publication lag."
+        )
+    except Exception as e:
+        out["error"] = str(e)
+    return out
+
+
 def try_indec_eph_xls() -> dict:
     url = (
         "https://www.indec.gob.ar/ftp/cuadros/sociedad/"
@@ -467,6 +525,21 @@ def main() -> None:
     save("ripte.json", ripte)
     track("ripte", ripte.get("series_count", 0) > 0, "")
 
+    national_idx = fetch_series_bundle(
+        ["149.1_TL_REGIADO_OCTU_0_16", "156.1_TLTAL_0_0_5"],
+        "National registered employment index / level",
+    )
+    save("labour_national.json", national_idx)
+    track("labour_national_index", national_idx.get("series_count", 0) > 0, "")
+
+    oede_xlsx = parse_oede_trabajo_registrado()
+    save("oede_xlsx.json", oede_xlsx)
+    track(
+        "oede_xlsx",
+        bool(oede_xlsx.get("provincial_employment")) or bool(oede_xlsx.get("national_wages")),
+        oede_xlsx.get("error") or "",
+    )
+
     rents = try_rent_index()
     save("rents.json", rents)
     track("rent_portals", any(a.get("ok") for a in rents.get("attempts", [])), "see facts.json for figures")
@@ -486,6 +559,8 @@ def main() -> None:
             "energy.json",
             "exports.json",
             "ripte.json",
+            "labour_national.json",
+            "oede_xlsx.json",
             "rents.json",
             "indec_eph_probe.json",
             "facts.json",
