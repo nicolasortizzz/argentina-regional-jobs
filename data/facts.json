@@ -13,12 +13,30 @@
     "source_url": "https://www.afip.gob.ar/ganancias/",
     "label": "Approximate monthly fourth-category scale (ARS, 2026 policy discourse — verify with AFIP tables)",
     "brackets": [
-      { "up_to": 2000000, "rate": 0 },
-      { "up_to": 2500000, "rate": 0.05 },
-      { "up_to": 3500000, "rate": 0.09 },
-      { "up_to": 5000000, "rate": 0.13 },
-      { "up_to": 8000000, "rate": 0.17 },
-      { "up_to": null, "rate": 0.21 }
+      {
+        "up_to": 2000000,
+        "rate": 0
+      },
+      {
+        "up_to": 2500000,
+        "rate": 0.05
+      },
+      {
+        "up_to": 3500000,
+        "rate": 0.09
+      },
+      {
+        "up_to": 5000000,
+        "rate": 0.13
+      },
+      {
+        "up_to": 8000000,
+        "rate": 0.17
+      },
+      {
+        "up_to": null,
+        "rate": 0.21
+      }
     ],
     "note": "Simplified progressive schedule for dashboard; actual withholding uses cumulative annual logic and deductions."
   },
@@ -26,66 +44,74 @@
     {
       "city": "Neuquén",
       "type": "2-room apartment",
-      "value": 580000,
-      "as_of": "2025-09",
-      "source_url": "https://www.argenprop.com/noticias/informe-alquileres/",
-      "label": "Published market survey (approx. median band)"
+      "value": 1037500,
+      "as_of": "2026-08",
+      "source_url": "https://www.lanacion.com.ar/propiedades/casas-y-departamentos/alquileres-cuanto-cuesta-alquilar-un-y-un-tres-ambientes-en-el-interior-del-pais-nid02082026/",
+      "label": "Reporte Inmobiliario survey via La Nación (avg 2-room, Neuquén Capital)",
+      "documented": true
     },
     {
       "city": "Mendoza",
       "type": "2-room apartment",
-      "value": 520000,
-      "as_of": "2025-09",
-      "source_url": "https://www.argenprop.com/noticias/informe-alquileres/",
-      "label": "Published market survey (approx. median band)"
+      "value": 833330,
+      "as_of": "2026-08",
+      "source_url": "https://www.lanacion.com.ar/propiedades/casas-y-departamentos/alquileres-cuanto-cuesta-alquilar-un-y-un-tres-ambientes-en-el-interior-del-pais-nid02082026/",
+      "label": "Reporte Inmobiliario survey via La Nación (avg 2-room, Mendoza Capital)",
+      "documented": true
     },
     {
       "city": "CABA",
       "type": "2-room apartment",
-      "value": 720000,
-      "as_of": "2025-09",
-      "source_url": "https://www.argenprop.com/noticias/informe-alquileres/",
-      "label": "Published market survey (approx. median band)"
+      "value": 898154,
+      "as_of": "2026-09",
+      "source_url": "https://www.zonaprop.com.ar/blog/wp-content/uploads/2026/10/INDEX_CABA_REPORTE_2026-09.pdf",
+      "label": "Zonaprop Index CABA, 2-room 50 m2 average, Sep 2026",
+      "documented": true
     },
     {
       "city": "Bariloche",
       "type": "2-room apartment",
-      "value": 490000,
-      "as_of": "2025-09",
-      "source_url": "https://www.argenprop.com/noticias/informe-alquileres/",
-      "label": "Published market survey (approx. median band)"
+      "value": 1328335,
+      "as_of": "2026-08",
+      "source_url": "https://www.lanacion.com.ar/propiedades/casas-y-departamentos/alquileres-cuanto-cuesta-alquilar-un-y-un-tres-ambientes-en-el-interior-del-pais-nid02082026/",
+      "label": "Reporte Inmobiliario survey via La Nación (avg 2-room, Bariloche)",
+      "documented": true
     },
     {
       "city": "Comodoro Rivadavia",
       "type": "2-room apartment",
-      "value": 450000,
-      "as_of": "2025-09",
-      "source_url": "https://www.argenprop.com/noticias/informe-alquileres/",
-      "label": "Published market survey (approx. median band)"
+      "value": 600000,
+      "as_of": "2026-08",
+      "source_url": "https://es.linkedin.com/posts/davidbukay_estad%C3%ADstica-territorio-activity-7495076967122300928-EFwq",
+      "label": "ACACE-Analytics median asking rent, apartments (all sizes), Aug 2026",
+      "documented": true
     },
     {
       "city": "Salta",
       "type": "2-room apartment",
-      "value": 380000,
-      "as_of": "2025-09",
-      "source_url": "https://www.argenprop.com/noticias/informe-alquileres/",
-      "label": "Published market survey (approx. median band)"
+      "value": 845000,
+      "as_of": "2026-08",
+      "source_url": "https://www.lanacion.com.ar/propiedades/casas-y-departamentos/alquileres-cuanto-cuesta-alquilar-un-y-un-tres-ambientes-en-el-interior-del-pais-nid02082026/",
+      "label": "Reporte Inmobiliario survey via La Nación (avg 2-room, Salta Capital)",
+      "documented": true
     },
     {
       "city": "San Juan",
       "type": "2-room apartment",
       "value": 410000,
       "as_of": "2025-09",
-      "source_url": "https://www.argenprop.com/noticias/informe-alquileres/",
-      "label": "Published market survey (approx. median band)"
+      "source_url": "",
+      "label": "Estimate — no documented 2026 survey found; 2025-era placeholder, likely understated",
+      "documented": false
     },
     {
       "city": "Río Gallegos",
       "type": "2-room apartment",
       "value": 420000,
       "as_of": "2025-09",
-      "source_url": "https://www.argenprop.com/noticias/informe-alquileres/",
-      "label": "Published market survey (approx. median band)"
+      "source_url": "",
+      "label": "Estimate — no documented 2026 survey found; 2025-era placeholder, likely understated",
+      "documented": false
     }
   ],
   "rigi": {
@@ -93,5 +119,6 @@
     "label": "RIGI — large investment regime (count illustrative; verify official registry)",
     "approved_projects_note": "Use official Ministry of Economy / Jefatura de Gabinete releases for current approved project count; dashboard cites regime as structural demand driver for energy & mining labour."
   },
-  "selection_rationale": "Growing provinces in this dashboard combine (i) positive multi-year SIPA private registered job growth and (ii) energy/mining or export momentum — Neuquén and Chubut via hydrocarbon basins, Mendoza/San Juan via mining & industry, Salta/Catamarca via mining & services, Santa Cruz via oil & logistics."
+  "selection_rationale": "Growing provinces in this dashboard combine (i) positive multi-year SIPA private registered job growth and (ii) energy/mining or export momentum — Neuquén and Chubut via hydrocarbon basins, Mendoza/San Juan via mining & industry, Salta/Catamarca via mining & services, Santa Cruz via oil & logistics.",
+  "rents_fetched_at": "2026-10-15T14:50:00Z"
 }

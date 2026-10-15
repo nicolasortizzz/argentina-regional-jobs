@@ -412,7 +412,8 @@ function drawAffordability() {
     };
   }
   const opts = S.aff;
-  const rows = provs.map((p) => ({ p, a: netAffordability(p, opts) })).filter((r) => r.a);
+  const rows = provs.map((p) => ({ p, a: netAffordability(p, opts) })).filter((r) => r.a && r.a.r);
+  const missing = provs.filter((p) => !rentForCity(p.rent_city)).map((p) => p.label);
   rows.sort((a, b) => b.a.surplus - a.a.surplus);
   plot(
     "affChart",
@@ -429,9 +430,9 @@ function drawAffordability() {
   $("#affRank").innerHTML = `<thead><tr><th>Rank</th><th>Province</th><th>Net</th><th>Costs</th><th>Surplus</th></tr></thead><tbody>${rows
     .map(
       (r, i) =>
-        `<tr><td>${i + 1}</td><td>${r.p.label}</td><td>${moneyArs(r.a.net)}</td><td>${moneyArs(r.a.costs)}</td><td class="${r.a.surplus >= 0 ? "up" : "dn"}">${moneyArs(r.a.surplus)}</td></tr>`
+        `<tr><td>${i + 1}</td><td>${r.p.label}${r.a.r.documented === false ? ' <span class="tag-estimate">rent est.</span>' : ""}</td><td>${moneyArs(r.a.net)}</td><td>${moneyArs(r.a.costs)}</td><td class="${r.a.surplus >= 0 ? "up" : "dn"}">${moneyArs(r.a.surplus)}</td></tr>`
     )
-    .join("")}</tbody>`;
+    .join("")}</tbody>` + (missing.length ? `<caption style="caption-side:bottom;text-align:left;opacity:.7;padding-top:6px">Excluded (no documented rent data): ${missing.join(", ")}. "rent est." = undocumented placeholder rent.</caption>` : "");
 }
 
 function drawProfile() {
