@@ -3,17 +3,32 @@ const $ = (s) => document.querySelector(s);
 const $$ = (s) => [...document.querySelectorAll(s)];
 const S = { tab: "overview", ccy: "USD", fx: 1, fxDate: "", drawn: {}, data: null, aff: { pct: 50, rentShare: 1, flatShare: 1 } };
 
-const OEDE_NAME = {
-  neuquen: "NEUQUÉN",
-  rio_negro: "RÍO NEGRO",
-  chubut: "CHUBUT",
-  santa_cruz: "SANTA CRUZ",
-  mendoza: "MENDOZA",
-  san_juan: "SAN JUAN",
-  salta: "SALTA",
-  catamarca: "CATAMARCA 3/",
-  caba: "Cdad. Autónoma de Buenos Aires",
-  pba: "BUENOS AIRES",
+const OEDE_PROV = {
+  neuquen: "Neuquén",
+  rio_negro: "Río Negro",
+  chubut: "Chubut",
+  santa_cruz: "Santa Cruz",
+  mendoza: "Mendoza",
+  san_juan: "San Juan",
+  salta: "Salta",
+  catamarca: "Catamarca",
+  national: "National",
+  caba: "CABA",
+  pba: "Buenos Aires",
+};
+const OEDE_WAGE_MONTH = "2026-05";
+const OEDE_WAGE_LABEL = "OEDE/SIPA, May 2026";
+const SIPA_INDEX_BASE = "2023-06";
+const SECTOR_LABELS = {
+  oil_gas: "Oil & gas",
+  mining: "Mining",
+  construction: "Construction",
+  logistics: "Logistics",
+  utilities: "Utilities",
+  finance: "Finance",
+  it_services: "IT services",
+  professional_services: "Professional services",
+  commerce_retail: "Commerce & retail",
 };
 
 const REGION_CANASTA = {
@@ -96,19 +111,73 @@ function cpiScale(fromDate) {
   return b.value / a.value;
 }
 
-function wageProvGross(prov, extrapolate = true) {
-  const raw = lastPt(ser(prov.wage_id));
-  if (!raw) return null;
-  let gross = raw.value;
-  let date = raw.date;
-  if (extrapolate) {
-    const sc = cpiScale(raw.date);
-    if (sc && sc > 1) {
-      gross *= sc;
-      date = lastPt(cpiIndex())?.date || date;
-    }
+function oedeProvKey(prov) {
+  return OEDE_PROV[prov.key] || prov.label;
+}
+
+function isSacMonth(ym) {
+  const m = +ym.slice(5, 7);
+  return m === 6 || m === 12;
+}
+
+function lastNonSacWagePt(series) {
+  for (let i = series.length - 1; i >= 0; i--) {
+    if (!isSacMonth(series[i].date)) return series[i];
   }
-  return { gross, date, extrapolated: extrapolate, raw };
+  return null;
+}
+
+function wageProvGross(prov) {
+  const rec = S.data.oede_wages?.provinces?.[oedeProvKey(prov)];
+  if (!rec?.series?.length) return null;
+  const pt = rec.series.find((p) => p.date === OEDE_WAGE_MONTH) || lastNonSacWagePt(rec.series);
+  if (!pt) return null;
+  return { gross: pt.value, date: pt.date, label: OEDE_WAGE_LABEL };
+}
+
+function lastNonNullPt(arr) {
+  for (let i = arr.length - 1; i >= 0; i--) {
+    if (arr[i]?.value != null && Number.isFinite(+arr[i].value)) return arr[i];
+  }
+  return null;
+}
+
+function cpiMomLatest() {
+  const s = serAny(S.data.cpi_national, "145.3_INGNACUAL_DICI_M_38");
+  return lastNonNullPt(s);
+}
+
+function sipaPts(label) {
+  return (S.data.sipa_employment?.provinces?.[label]?.points || []).slice();
+}
+
+function sipaValueAt(label, ym) {
+  const pts = sipaPts(label);
+  const hit = pts.find((p) => p.date === ym);
+  if (hit) return hit.value;
+  const before = pts.filter((p) => p.date < ym).pop();
+  const after = pts.find((p) => p.date > ym);
+  if (before && after) {
+    const t0 = new Date(`${before.date}-01`).getTime();
+    const t1 = new Date(`${after.date}-01`).getTime();
+    const t = new Date(`${ym}-01`).getTime();
+    const w = (t - t0) / (t1 - t0);
+    return before.value + w * (after.value - before.value);
+  }
+  return before?.value ?? after?.value ?? null;
+}
+
+function sectorWageMax(prov, sectorKey) {
+  const sec = S.data.oede_wages?.provinces?.[oedeProvKey(prov)]?.sectors?.[sectorKey];
+  return sec?.max ?? null;
+}
+
+function analystGross(prov) {
+  const keys = ["finance", "it_services", "professional_services"];
+  const vals = keys.map((k) => sectorWageMax(prov, k)).filter((v) => v != null && Number.isFinite(v));
+  if (!vals.length) return null;
+  const gross = vals.reduce((a, b) => a + b, 0) / vals.length;
+  return { gross, date: OEDE_WAGE_MONTH, label: OEDE_WAGE_LABEL, sectors: keys };
 }
 
 function rentForCity(name) {
@@ -143,8 +212,8 @@ function gananciasMonthly(taxable) {
   return tax;
 }
 
-function netAffordability(prov, opts) {
-  const w = wageProvGross(prov, true);
+function netAffordability(prov, opts, wageFn = wageProvGross) {
+  const w = wageFn(prov);
   if (!w) return null;
   const gross = w.gross * (opts.pct / 50);
   const ss = gross * 0.17;
@@ -193,8 +262,8 @@ function drawOverview() {
   const empNeu = lastPt(ser(neu?.employment_id));
   const unNeu = lastPt(ser(neu?.unemployment_id));
   const unNat = lastPt(ser(nat?.unemployment_id));
-  const wNeu = wageProvGross(neu, true);
-  const cpi = lastPt(serAny(S.data.cpi_national, "145.3_INGNACUAL_DICI_M_38"));
+  const wNeu = wageProvGross(neu);
+  const cpi = cpiMomLatest();
 
   renderKpis($("#ovKpis"), [
     {
@@ -208,17 +277,17 @@ function drawOverview() {
       s: unNat ? `${unNat.date.slice(0, 7)}` : "",
     },
     {
-      l: "Neuquén gross wage (est.)",
+      l: "Neuquén gross wage",
       v: wNeu
         ? S.ccy === "USD"
           ? `$${fmtNum(wNeu.gross / S.fx, 0)}`
           : `ARS ${fmtNum(wNeu.gross, 0)}`
         : "—",
-      s: wNeu ? `CPI-scaled from ${wNeu.raw?.date?.slice(0, 4) || "—"}` : "",
+      s: wNeu ? OEDE_WAGE_LABEL : "",
     },
     {
       l: "National CPI (m/m)",
-      v: cpi ? fmtPct(cpi.value, 1) : "—",
+      v: cpi ? fmtPct(cpi.value * 100, 1) : "—",
       s: cpi ? cpi.date.slice(0, 7) : "",
     },
   ]);
@@ -314,7 +383,7 @@ function drawSectors() {
 function drawWages() {
   const provs = S.data.labour_provinces?.provinces || [];
   const rows = provs.map((p) => {
-    const w = wageProvGross(p, true);
+    const w = wageProvGross(p);
     return { p, w };
   });
   plot(
@@ -331,9 +400,9 @@ function drawWages() {
   );
   $("#wgTable").innerHTML = `<thead><tr><th>Province</th><th>Gross (est.)</th><th>As of</th><th>vs CABA</th></tr></thead><tbody>${rows
     .map((r) => {
-      const caba = wageProvGross(S.data.labour_provinces.benchmarks.find((b) => b.key === "caba"), true);
+      const caba = wageProvGross(S.data.labour_provinces.benchmarks.find((b) => b.key === "caba"));
       const ratio = r.w && caba?.gross ? r.w.gross / caba.gross : null;
-      return `<tr><td>${r.p.label}</td><td>${r.w ? moneyArs(r.w.gross) : "—"}</td><td>${r.w?.raw?.date?.slice(0, 7) || "—"}</td><td>${ratio ? fmtPct((ratio - 1) * 100) : "—"}</td></tr>`;
+      return `<tr><td>${r.p.label}</td><td>${r.w ? moneyArs(r.w.gross) : "—"}</td><td>${r.w?.date?.slice(0, 7) || "—"}</td><td>${ratio ? fmtPct((ratio - 1) * 100) : "—"}</td></tr>`;
     })
     .join("")}</tbody>`;
 }
@@ -453,7 +522,7 @@ function drawProfile() {
       {
         x: provs.map((p) => p.label),
         y: provs.map((p) => {
-          const w = wageProvGross(p, true);
+          const w = wageProvGross(p);
           return w && lastFin ? w.gross / lastFin.value : null;
         }),
         type: "bar",
@@ -549,6 +618,8 @@ async function load() {
     "facts",
     "sources",
     "oede_xlsx",
+    "oede_wages",
+    "sipa_employment",
     "rents",
   ];
   const payload = {};
