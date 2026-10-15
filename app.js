@@ -85,11 +85,14 @@ function moneyArs(v, d = 0) {
 function cpiIndex() {
   return serAny(S.data.cpi_national, "145.3_INGNACNAL_DICI_M_15");
 }
-function cpiScale(fromDate, toDate) {
+function cpiScale(fromDate) {
   const idx = cpiIndex();
-  const a = idx.find((p) => p.date.startsWith(fromDate.slice(0, 7)));
   const b = lastPt(idx);
-  if (!a || !b || !a.value) return 1;
+  if (!b?.value) return 1;
+  const target = fromDate.slice(0, 7);
+  let a = idx.find((p) => p.date.startsWith(target));
+  if (!a) a = idx.find((p) => p.date >= `${target}-01`) || idx[0];
+  if (!a?.value) return 1;
   return b.value / a.value;
 }
 
@@ -99,7 +102,7 @@ function wageProvGross(prov, extrapolate = true) {
   let gross = raw.value;
   let date = raw.date;
   if (extrapolate) {
-    const sc = cpiScale(raw.date, "");
+    const sc = cpiScale(raw.date);
     if (sc && sc > 1) {
       gross *= sc;
       date = lastPt(cpiIndex())?.date || date;
