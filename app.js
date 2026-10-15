@@ -666,32 +666,32 @@ function drawAffordability() {
 }
 
 function drawProfile() {
-  const finId = S.data.labour_sectors?.sectors?.financial?.wage_id;
-  const fin = serAny(S.data.labour_sectors, finId);
-  const lastFin = lastPt(fin);
-  $("#profText").innerHTML = `<p>Roles in <b>financial intermediation</b>, <b>professional services</b>, and <b>information &amp; communication</b> are proxied here with national financial-sector remuneration (SIPA) and provincial private-sector wage levels from datos.gob.ar.</p>
-    <p>Latest national financial remuneration observation: <b>${lastFin ? moneyArs(lastFin.value) : "—"}</b> (${lastFin?.date?.slice(0, 7) || "n/a"}).</p>`;
-  plot(
-    "profWage",
-    [{ x: fin.map((p) => p.date), y: fin.map((p) => p.value), type: "scatter", mode: "lines", name: "Financial sector" }],
-    { yaxis: { title: "ARS" } }
-  );
   const provs = S.data.labour_provinces?.provinces || [];
-  plot(
-    "profCmp",
-    [
-      {
-        x: provs.map((p) => p.label),
-        y: provs.map((p) => {
-          const w = wageProvGross(p);
-          return w && lastFin ? w.gross / lastFin.value : null;
-        }),
-        type: "bar",
-        name: "Prov wage / financial wage",
-      },
-    ],
-    { yaxis: { title: "Ratio" } }
-  );
+  const roleKeys = ["finance", "it_services", "professional_services"];
+  $("#profText").innerHTML = `<p>Provincial <b>finance</b>, <b>IT services</b>, and <b>professional services</b> remuneration from OEDE/SIPA provincial xlsx (${OEDE_WAGE_LABEL}). Analyst gross wage is the simple average of the three sector means when all are published for a province.</p>
+    <p>Net monthly savings use the same rent + CBT proxy and tax assumptions as the Affordability tab (50th percentile slider applies).</p>`;
+  const traces = roleKeys.map((rk) => ({
+    x: provs.map((p) => p.label),
+    y: provs.map((p) => wageArsOrUsd(sectorWageMax(p, rk))),
+    type: "bar",
+    name: SECTOR_LABELS[rk] || rk,
+  }));
+  plot("profWage", traces, { barmode: "group", yaxis: { title: S.ccy === "USD" ? `ARS sector wage → USD (@ ${S.fxDate})` : "ARS / month" } });
+
+  const opts = S.aff;
+  const rows = provs
+    .map((p) => ({ p, a: netAffordability(p, opts, analystGross) }))
+    .filter((r) => r.a && r.a.r);
+  rows.sort((a, b) => b.a.surplus - a.a.surplus);
+  $("#profRank").innerHTML = `<thead><tr><th>Rank</th><th>Province</th><th>Analyst gross</th><th>Net</th><th>Surplus</th></tr></thead><tbody>${rows
+    .map((r, i) => {
+      const g = analystGross(r.p);
+      const usdG = g ? g.gross / S.fx : null;
+      const usdN = r.a.net / S.fx;
+      const usdS = r.a.surplus / S.fx;
+      return `<tr><td>${i + 1}</td><td>${r.p.label}</td><td>${moneyArs(g?.gross)} <span class="muted small">($${fmtNum(usdG, 0)})</span></td><td>${moneyArs(r.a.net)} <span class="muted small">($${fmtNum(usdN, 0)})</span></td><td class="${r.a.surplus >= 0 ? "up" : "dn"}">${moneyArs(r.a.surplus)} <span class="muted small">($${fmtNum(usdS, 0)})</span></td></tr>`;
+    })
+    .join("")}</tbody>`;
 }
 
 function drawScenarios() {
